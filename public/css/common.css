@@ -1,0 +1,60 @@
+/* 公用的样式 */
+html,body{
+    height:100%;
+}
+body{
+    display: flex;
+}
+.layout-side{
+    flex-shrink: 0;
+    width: 256px;
+    height: 100%;
+    background: red;
+}
+.layout-main{
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    background: #ccc;
+}
+.layout-header{
+    height: 64px;
+    background:#fff;
+    box-shadow: 0 0 10px #ccc;
+}
+.layout-body{
+    flex: 1;
+    overflow-y: auto;
+}
+.layout-side li a{
+    display: block;
+    height: 50px;
+    line-height:50px;
+    border-bottom: 1px solid #000;
+    color: #fff;
+    padding-left:20px;
+}
+
+
+/* ----------table------------------------ */
+.mz-table{
+    border: 1px solid #000;
+    width: 100%;
+    
+}
+.mz-table th,.mz-table td{
+    line-height:50px;
+    height: 50px;
+    border: 1px solid #000;
+    vertical-align: middle;
+    text-align: center;
+}
+
+.mz-table .banner-img{
+    height: 50px;
+    display: block;
+    margin:0 auto;
+}
+.pagination{
+    float: right;
+}
