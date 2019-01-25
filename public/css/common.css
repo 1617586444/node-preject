@@ -1,60 +1,148 @@
 /* 公用的样式 */
-html,body{
-    height:100%;
+html,
+body {
+    height: 100%;
 }
-body{
+
+body {
     display: flex;
 }
-.layout-side{
+
+.layout-side {
     flex-shrink: 0;
     width: 256px;
     height: 100%;
-    background: red;
+    background: #13C2C2;
 }
-.layout-main{
+
+.layout-main {
     display: flex;
     flex-direction: column;
     flex: 1;
-    background: #ccc;
+    background: #F0F2F5;
 }
-.layout-header{
+
+.layout-header {
     height: 64px;
-    background:#fff;
+    background: #fff;
     box-shadow: 0 0 10px #ccc;
 }
-.layout-body{
+
+.layout-body {
     flex: 1;
     overflow-y: auto;
 }
-.layout-side li a{
+
+.layout-side li a {
     display: block;
     height: 50px;
-    line-height:50px;
-    border-bottom: 1px solid #000;
+    line-height: 50px;
+    border-bottom: 1px solid #ccc;
     color: #fff;
-    padding-left:20px;
+    padding-left: 20px;
 }
 
 
 /* ----------table------------------------ */
-.mz-table{
+.mz-table {
     border: 1px solid #000;
     width: 100%;
-    
+
 }
-.mz-table th,.mz-table td{
-    line-height:50px;
+
+.mz-table th,
+.mz-table td {
+    line-height: 50px;
     height: 50px;
     border: 1px solid #000;
     vertical-align: middle;
     text-align: center;
 }
 
-.mz-table .banner-img{
+.mz-table .banner-img {
     height: 50px;
     display: block;
-    margin:0 auto;
+    margin: 0 auto;
 }
-.pagination{
+
+.pagination {
     float: right;
+}
+
+.l-head-logo {
+    display: inline-block;
+    height: 64px;
+    width: 68px;
+    float: left;
+    text-align: center;
+    line-height: 64px;
+}
+
+.l-head-logo>img {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+
+.header-right {
+    display: flex;
+    justify-content: space-between;
+    width: 300px;
+    height: 64px;
+    float: right;
+}
+
+.header-right a {
+    height: 64px;
+    line-height: 64px;
+    color: #000;
+}
+
+.header-right a:nth-child(4) img {
+    width: 34px;
+    height: 24px;
+    line-height: 64px;
+}
+
+/* -----头部----- */
+.layout-header {
+    background: pink;
+}
+
+#nav {
+    float: right;
+    background: pink;
+
+}
+
+#nav>li>a {
+    color: #000;
+    text-decoration: none;
+}
+
+
+/* 登录 */
+#login {
+    width: 600px;
+    height: 380px;
+    margin: 100px auto;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, .5)
+}
+
+#login h2 {
+    padding-top: 50px;
+    width: 150px;
+    margin: auto;
+    margin-bottom: 50px;
+}
+
+#login #btn {
+    width: 600px;
+    text-align: center;
+}
+/* 主页轮播图 */
+#test10{
+    margin:10px auto;
 }
