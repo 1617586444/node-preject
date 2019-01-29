@@ -142,7 +142,34 @@ body {
     width: 600px;
     text-align: center;
 }
+
 /* 主页轮播图 */
-#test10{
-    margin:10px auto;
+#test10 {
+    margin: 10px auto;
+}
+
+/* 查询 */
+.search {
+    border: 0;
+    width: 100px;
+    text-indent:0.5em;
+    font-size: 1em;
+    margin: 15px 0;
+}
+.span{
+    float: right;
+    margin-right:10px;
+}
+.btn-search{
+    background:orange;
+    border-radius:6px;
+    border: 0;
+    width: 45px;
+    margin-left:5px;
+}
+.nowPlayingList{
+    height:auto;
+}
+.newInfo{
+    color: #000;
 }

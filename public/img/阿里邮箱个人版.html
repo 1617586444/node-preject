@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<!-- saved from url=(0247)https://mail.aliyun.com/alimail/#h=WyJmbV81YzNGdFh6ZzBYekUxTkRnMU9ERXlPVFV3TVRBX0UiLFsiNSIsInNxbV84NF8xNTQ4NTgxMjk1MDEwIix7Im1haWxJZCI6IjVfMDpEenp6enlYZ2NLRyQtLS0wVEo1TWI5NSIsInR5cGUiOiJkcmFmdCJ9LHsibGFiZWwiOiLljZbluqflkI7lj7DnrqHnkIbns7vnu58ifV1d -->
+<html data-blockbyte-bs-uid="42183"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>阿里邮箱个人版</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <link rel="shortcut icon" href="https://mail.aliyun.com/static/5478978/images/favicon.ico">
+    <style type="text/css">
+        * {
+            outline: medium none;
+        }
+
+        html, body {
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        body {
+            background-color: #FFFFFF;
+            color: #444444;
+            font-size: 12px;
+            font-family: Tahoma, Arial, 'Microsoft Yahei';
+            background-color: #FFFFFF;
+            line-height: 1.666;
+            position: relative;
+        }
+
+        html, body, div, form, input, textarea, span, img, iframe, ul, ol, li, b, em, i, a {
+            margin: 0;
+            border: 0;
+            padding: 0;
+            /*
+             * This is removed dur to zoom in/out issue in Safari.
+             *
+             * -webkit-text-size-adjust: none;
+             */
+        }
+
+        html, body {
+            scrollbar-base-color: #dddddd;
+            scrollbar-3dlight-color: #ffffff;
+            scrollbar-highlight-color: #dddddd;
+            scrollbar-shadow-color: #ffffff;
+            scrollbar-darkshadow-color: #ffffff;
+            scrollbar-track-color: #ffffff;
+            scrollbar-arrow-color: #999999;
+        }
+
+        .loading_wrap {
+            z-index: 9999;
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            background-color: #ffffff;
+            overflow: hidden;
+        }
+
+        .loading_transparency {
+            opacity: 0;
+        }
+
+        .loading_content_wrap {
+            position: absolute;
+            overflow: hidden;
+            top: 44%;
+            left: 0;
+            width: 100%;
+            font-size: 0;
+        }
+
+        .loading_prompt {
+            padding-bottom: 12px;
+            line-height: 30px;
+            font-size: 14px;
+            font-weight: bold;
+            color: #222222;
+            overflow: hidden;
+            text-align: center;
+            white-space: nowrap;
+        }
+
+        .loading_status {
+            position: absolute;
+            bottom: 10px;
+            right: 15px;
+            line-height: 20px;
+            color: #AAAAAA;
+            overflow: hidden;
+            text-overflow: clip;
+            white-space: nowrap;
+        }
+
+        .loading_progress_bar {
+            width: 400px;
+            margin: 0 auto;
+            height: 8px;
+            border: 1px solid #DCDCDC;
+            zoom: 1;
+            padding: 1px;
+            overflow: hidden;
+        }
+
+        .loading_progress_inner {
+            width: 0%;
+            height: 8px;
+            overflow: hidden;
+            background-color: #DCDCDC;
+        }
+
+        .intro_page_wrap {
+            z-index: 11000;
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            background-color: #1074b9;
+        }
+
+        .intro_page_iframe {
+            position: absolute;
+            z-index: 11100;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+        }
+    </style>
+
+    <style class="blockbyte-bs-style" data-name="content">body>div#blockbyte-bs-indicator>div{opacity:0;pointer-events:none}body>iframe#blockbyte-bs-sidebar.blockbyte-bs-visible,body>iframe#blockbyte-bs-overlay.blockbyte-bs-visible{opacity:1;pointer-events:auto}body.blockbyte-bs-noscroll{overflow:hidden !important}body>div#blockbyte-bs-indicator>div{position:absolute;transform:translate3d(-40px, 0, 0);top:0;left:0;width:40px !important;height:100%;background:rgba(0,0,0,0.5);border-radius:0 10px 10px 0;transition:opacity 0.3s, transform 0.3s;z-index:2}body>div#blockbyte-bs-indicator>div>span{-webkit-mask:no-repeat center/32px;-webkit-mask-image:url(chrome-extension://jdbnofccmhefkmjbkkdkfiicjkgofkdh/img/icon-bookmark.svg);background-color:#ffffff;position:absolute;display:block;top:0;left:0;width:100%;height:100%}body>div#blockbyte-bs-indicator[data-pos='right']{left:auto;right:0}body>div#blockbyte-bs-indicator[data-pos='right']>div{transform:translate3d(40px, 0, 0);left:auto;right:0;border-radius:10px 0 0 10px}body>div#blockbyte-bs-indicator.blockbyte-bs-fullHeight>div{border-radius:0}body>div#blockbyte-bs-indicator.blockbyte-bs-hover>div{transform:translate3d(0, 0, 0);opacity:1}body>div#blockbyte-bs-indicator[data-pos='left'].blockbyte-bs-has-lsb{height:100% !important;top:0 !important}body>div#blockbyte-bs-indicator[data-pos='left'].blockbyte-bs-has-lsb>div{background:transparent}body>div#blockbyte-bs-indicator[data-pos='left'].blockbyte-bs-has-lsb>div>span{-webkit-mask-position-y:20px}body>iframe#blockbyte-bs-sidebar{width:220px;max-width:none;height:0;z-index:2147483646;background-color:rgba(255,255,255,0.8) !important;border:none;display:block !important;transform:translate3d(-220px, 0, 0);transition:width 0s 0.3s, height 0s 0.3s, opacity 0.3s, transform 0.3s}body>iframe#blockbyte-bs-sidebar[data-pos='right']{left:auto;right:0;transform:translate3d(220px, 0, 0)}body>iframe#blockbyte-bs-sidebar.blockbyte-bs-visible{width:calc(100% + 220px);height:100%;transform:translate3d(0, 0, 0);transition:opacity 0.3s, transform 0.3s}body>iframe#blockbyte-bs-sidebar.blockbyte-bs-hideMask{background:none !important}body>iframe#blockbyte-bs-sidebar.blockbyte-bs-hideMask:not(.blockbyte-bs-hover){width:calc(220px + 50px)}body>iframe#blockbyte-bs-overlay{width:100%;max-width:none;height:100%;z-index:2147483647;border:none;background:rgba(0,0,0,0.5) !important;transition:opacity 0.3s}
+</style><style></style><script type="text/javascript" async="" charset="utf-8" src="./阿里邮箱个人版_files/core.php"></script><script src="./阿里邮箱个人版_files/c.php"></script><link href="./阿里邮箱个人版_files/layout_0_webkit.css" rel="stylesheet" type="text/css" _styleid="sqm_17"><link href="./阿里邮箱个人版_files/editor_0_webkit.css" rel="stylesheet" type="text/css" _styleid="sqm_18"><link href="./阿里邮箱个人版_files/settings_0_webkit.css" rel="stylesheet" type="text/css" _styleid="sqm_19"></head>
+<body id="sqm_16">
+            <script type="text/javascript" nonce="">
+    function goToNoneCdn(w) {
+        var pn = w.location.pathname;
+        var qs = w.location.search;
+        var ph = w.location.hash;
+
+        if (qs.indexOf('?') == 0) {
+            qs = qs.substring(1);
+        }
+
+        if (ph.indexOf('#') == 0) {
+            ph = ph.substring(1);
+        }
+
+        var reurl = pn;
+
+        if (qs.length > 0) {
+            reurl += "?" + qs;
+        }
+
+        var targetUrl = '\/alimail\/auth\/redirectNoneCdn';
+
+        targetUrl = targetUrl + "?reurl=" + encodeURIComponent(reurl) + "#" + ph;
+
+        w.location.href = targetUrl;
+    }
+</script>
+
+    
+    
+
+<div class="root_notice" style="display:none;" id="sqm_20">
+    <div class="root_notice_text_wrap">
+        <div class="absolute_full root_notice_text ellipsis">&nbsp;</div>
+    </div>
+
+    <div class="evt hover_wrap ico_wrap root_notice_close" evt="clk_domcommand" _v="close_notice">
+        <b class="ico ico_misc_close_big"></b>
+    </div>
+</div>
+
+<div id="root_wrap" class="absolute_horizon_full root_wrap" style="visibility: visible;">
+    <div class="absolute_full root_background">
+        <div class="root_background_left absolute_full"></div>
+    </div>
+
+    <div id="header" class="absolute_horizon_full header_wrap client_drag unselectable">
+    <div class="root_background_top absolute_top_full"></div>
+    
+    <div class="header_logo_wrap sqm_title client_no_drag evt" evt="clk_domcommand" _v="logo" _title="阿里邮箱个人版" style="background-image:url(/static/5478978/images/forFreemail/logo.png)"></div>
+
+    <div id="header_center_wrap" class="header_center_wrap client_no_drag">
+        <div id="root_whale_animation" class="root_whale_animation evt" _v="new_version" _target="_blank" evt="clk_domcommand" hidefocus="true" style="">
+            <div class="root_whale_animation_text">体验新版</div>
+            <img class="root_whale_animation_bg evt" _v="new_version" evt="clk_domcommand" hidefocus="true" src="./阿里邮箱个人版_files/whale.gif">
+        </div>
+        <div class="header_search_wrap evt" evt="clk_domcommand msdn_domcommand" _v="focus" id="sqm_26">
+            <div class="hover_wrap ico_wrap header_search_button evt" evt="clk_domcommand" _v="search">
+                <b class="ico ico_nav_search"></b>
+            </div>
+
+            <div class="header_search_input">
+                <img class="header_search_loading" style="display:none;" src="./阿里邮箱个人版_files/small_loading.gif">
+
+                <div class="header_search_input_textbox">
+                    
+<div class="evt textbox_wrap " evt="clk_domcommand" _v="focus" id="sqm_27">
+            <div class="textbox_place">搜索邮件和联系人</div>
+        <div class="textbox_inner">
+        <input type="text" class="textbox_input" maxlength="254" tabindex="100">
+    </div>
+</div>
+                </div>
+            </div>
+
+            <div class="evt text_link header_search_advanced" evt="clk_domcommand" _v="search_advanced">
+                高级搜索
+            </div>
+        </div>
+    </div>
+
+    <div id="header_right_wrap" class="header_right_wrap client_no_drag">
+        <div id="header_right_custom_wrap" class="header_right_custom_wrap inline_block" style=""><div class="header_custom_link_item header_part evt inline_block text_link fs12" _te="aliyunbz1" evt="clk_domcommand" _link="http://service.taobao.com/support/minerva/beta_robot_main.htm?sourceId=1506120031" _target="_blank">邮箱小助手</div></div>
+        <div class="evt inline_block hover_wrap header_part sqm_title header_phone_wrap" _align="2" evt="clk_domcommand" _target="_blank" style="" _link="http://www.alimei.com/cloudmailapp.htm" _title="下载阿里邮箱客户端">
+            <b class="ico ico_nav_barcode"></b>
+        </div>
+
+        <div class="evt inline_block header_part sqm_title header_clock_wrap" evt="clk_domcommand" _v="notify" style="display: none;" id="sqm_28" _title="您当前有个会议邀请，点击显示详情">
+            <div class="header_clock_count">0</div>
+            <b class="ico ico_calendar_notify"></b>
+        </div>
+
+        <div class="evt inline_block header_part sqm_title hover_wrap header_disk_wrap" evt="clk_domcommand" _v="show_upload" id="sqm_29">
+            <b class="ico ico_disk_notify"></b>
+            <img class="ico header_disk_img" src="./阿里邮箱个人版_files/disk.gif" style="display: none;">
+        </div>
+
+        <div class="evt inline_block header_part sqm_title hover_wrap header_admin_wrap sqm_title" evt="clk_domcommand" _v="admin" style="display: none;" _title="域管理">
+            <b class="ico ico_nav_admin"></b>
+        </div>
+
+        <div class="inline_block header_part header_settings_wrap">
+            <a href="javascript:void(0);" hidefocus="true" class="hover_wrap inline_block header_settings evt sqm_title" evt="clk_domcommand" _v="settings" _title="设置">
+                <b class="ico ico_settings_config"></b>
+            </a>
+            <a href="javascript:void(0);" hidefocus="true" class="inline_block header_settings_dd hover_wrap evt" evt="clk_domcommand" _v="settings_dd">
+                <b class="ico ico_header_dd_big"></b>
+            </a>
+        </div>
+
+        <div class="inline_block header_account_wrap hover_wrap evt" evt="clk_domcommand" _v="account_tips" id="sqm_25" _title="yangjiandu@aliyun.com"><b class="ico header_account_avatar ico_avatar_people_28"></b>
+            <b class="ico ico_wrap ico_avatar_outline header_account_avatar_outline"></b>
+            <b class="ico ico_wrap ico_header_dd_big header_account_dd"></b>
+        yangjiandu</div>
+    </div>
+</div>
+
+    <div class="navbar_wrap unselectable" style="" id="sqm_21">
+    <div class="navbar_top">
+        <div class="navbar_compose_wrap evt navbar_compose_handler" evt="clk_domcommand" _v="compose" style="">
+            <b class="ico ico_nav_compose"></b>
+        </div>
+        <div class="navbar_btn_wrap">
+            <div class="evt ico_wrap navbar_btn hover_wrap navbar_inbox_wrap sqm_title" evt="clk_domcommand" _v="inbox" _align="2" _title="邮件">
+                <b class="ico ico_nav_inbox"></b>
+                <b class="ico ico_wrap ico_misc_newtip ico_navbar_new_inbox" style="display:none;"></b>
+                <div class="absolute_full navbar_btn_inbox_drop"></div>
+            </div>
+        </div>
+
+        <div class="navbar_shortcut_wrap">
+            <div class="navbar_shortcut_list"><div draggable="true" class="sqm_title draggable navbar_btn_wrap hover_wrap navbar_shortcut_item evt list_item" _id="app_go_contact" id="sqm_54" evt="clk_domcommand" _v="view_shortcut" _te="app_go_contact" _align="2" _title="通讯录"><span class="navbar_shortcut_span navbar_shortcut_span_img"><b class="ico ico_wrap ico_nav_contact"></b></span><div class="absolute_full navbar_shortcut_drop"></div></div><div draggable="true" class="sqm_title draggable navbar_btn_wrap hover_wrap navbar_shortcut_item evt list_item" _id="app_go_calendar" id="sqm_55" evt="clk_domcommand" _v="view_shortcut" _te="app_go_calendar" _align="2" _title="日历"><span class="navbar_shortcut_span navbar_shortcut_span_img"><b class="ico ico_wrap ico_nav_cal"></b></span><div class="absolute_full navbar_shortcut_drop"></div></div><div draggable="true" class="sqm_title draggable navbar_btn_wrap hover_wrap navbar_shortcut_item evt list_item" _id="app_go_netdisk" id="sqm_56" evt="clk_domcommand" _v="view_shortcut" _te="app_go_netdisk" _align="2" _title="网盘"><span class="navbar_shortcut_span navbar_shortcut_span_img"><b class="ico ico_wrap ico_nav_disk"></b></span><div class="absolute_full navbar_shortcut_drop"></div></div></div>
+            <div class="navbar_shortcut_fill"><div class="navbar_shortcut_drop absolute_full"></div></div>
+        </div>
+    </div>
+    <div class="navbar_bottom">
+        <div class="navbar_btn_wrap">
+            <div class="evt ico_wrap navbar_btn hover_wrap navbar_app_wrap" evt="clk_domcommand" _v="appcenter" _align="2">
+                <b class="ico ico_nav_app"></b>
+            </div>
+        </div>
+    </div>
+    <div class="navbar_highlight_wrap absolute_full" style="display:none;">
+        <div class="navbar_highlight_left"></div>
+        <div class="navbar_highlight_right"></div>
+        <div class="navbar_highlight_top"></div>
+        <div class="navbar_highlight_bottom"></div>
+    </div>
+</div>
+    
+    <div class="tabbar unselectable root_tabbar" id="sqm_23" style="visibility: visible;">
+        <div class="root_tabbar_items_wrap">
+            <div class="evt tbitem_wrap tbitem_default_wrap root_tbitem_wrap draggable" _l="0" draggable="true" style="" _id="fm_2" evt="clk_domcommand ctxmu_h_domcontextmenu" _v="active" id="sqm_37"><div class="root_tbitem_label_wrap"><div class="text_light tbitem_label root_tbitem_label ellipsis sqm_title text_center" _title="邮件">邮件</div></div><div class="ico_wrap tbitem_close evt hover_wrap" evt="clk_domcommand" _v="close"><b class="ico ico_misc_close_small"></b></div><img class="tbitem_loading" src="./阿里邮箱个人版_files/small_loading.gif" style="display: none;"><b class="ico ico_wrap tbitem_error" style="display: none;"></b></div><div class="evt tbitem_wrap tbitem_default_wrap tbitem_closeable root_tbitem_wrap draggable root_tbitem_on select_on" _l="0" draggable="true" style="" _id="fm_5c3FtXzg0XzE1NDg1ODEyOTUwMTA_E" evt="clk_domcommand ctxmu_h_domcontextmenu" _v="active" id="sqm_126"><div class="root_tbitem_label_wrap"><div class="text_light tbitem_label root_tbitem_label ellipsis sqm_title" _title="卖座后台管理系统">卖座后台管理系统</div></div><div class="ico_wrap tbitem_close evt hover_wrap" evt="clk_domcommand" _v="close"><b class="ico ico_misc_close_small"></b></div><img class="tbitem_loading" src="./阿里邮箱个人版_files/small_loading.gif" style="display: none;"><b class="ico ico_wrap tbitem_error" style="display: none;"></b></div><div class="root_tabbar_dd_wrap fs0" style="display:none;">
+                <a class="evt ico_wrap root_tabbar_dd hover_wrap" hidefocus="true" evt="clk_domcommand" _v="open">
+                    <b class="ico ico_menu_arrow_dd"></b>
+                </a>
+            </div>
+            <div class="root_tabbar_filling">
+                <div class="root_tabbar_filling_inner"></div>
+            </div>
+        </div>
+    </div>
+    <div class="root_right_wrap" style="top: 101px;">
+        <div class="navpane_wrap" style="visibility: visible; width: 190px; display: none;" id="sqm_24">
+    <div class="navpane_inner_wrap" style="width: 190px;">
+        <div class="absolute_full navpane_mail" style="display: none;" id="sqm_38">
+            <div class="navpane_top_wrap evt" evt="clk_domcommand" _v="back_top">
+                <div class="navpane_title fs14 bold">我的邮箱</div>
+            </div>
+            <div class="navpane_content_wrap scroll scroll_auto_y">
+                <div class="clear1px"></div>
+                <div class="navpane_tree_favourite navpane_tree_wrap tree_wrap" id="sqm_39" style="display: none;"><div id="sqm_45" class="treenode_wrap"><div class="treenode_item_wrap evt" evt="clk_domcommand" _v="toggle"><div draggable="true" class="sqm_title draggable treenode_item_text ellipsis" _align="2" _delay="400" _title="将文件夹或标签拖动到“我的收藏”文件夹，方便您快速访问，最多支持10项。" style="padding-left:22px;" _padding="22"><b class="treenode_newtip_wrap fs0"><b class="ico ico_misc_newtip ico_treenode_newtip"></b></b>我的收藏夹</div><b class="ico_treenode_expcol_wrap ico_treenode_expcol_nochild ico_wrap evt" style="left:10px;" evt="clk_domcommand" _padding="10" _v="toggle"><b class="ico ico_treenode_expcol"></b></b></div><div class="treenode_children_wrap" style="display:none;"></div></div></div>
+                <div class="navpane_info_favourite text_light" style="display: none;">
+                    <div class="navpane_info_favourite_text ellipsis sqm_title" style="" _title="将文件夹或标签拖动到“我的收藏”文件夹，方便您快速访问，最多支持10项。">
+                        拖动文件夹到“我的收藏”
+                        <b class="ico ico_wrap ico_tree_remove navpane_info_favourite_close evt" evt="clk_domcommand" _v="close_favourite"></b>
+                    </div>
+                    <div class="navpane_info_favourite_drop"></div>
+                </div>
+                <div class="navpane_tree_topfolder navpane_tree_wrap tree_wrap" id="sqm_40"><div id="sqm_46" class="treenode_wrap treenode_wrap_hidden"><div class="treenode_item_wrap evt" evt="clk_domcommand" _v="toggle" style="display: none;"><div draggable="true" class="sqm_title draggable treenode_item_text ellipsis" style="padding-left:22px;" _padding="22">邮箱文件夹</div><b class="ico_treenode_expcol_wrap ico_wrap evt ico_treenode_exp_wrap" style="left:10px;" evt="clk_domcommand" _padding="10" _v="toggle"><b class="ico ico_treenode_expcol"></b></b></div><div class="treenode_children_wrap" style=""><div id="sqm_69" class="treenode_wrap"><div class="treenode_item_wrap evt" evt="clk_domcommand" _v="click"><div draggable="true" class="sqm_title draggable treenode_item_text ellipsis treenode_item_text_hover" style="padding-left: 22px;" _padding="22">未读邮件<b class="ico ico_tree_op evt treenode_item_hover_show ico_treenode_right" evt="clk_domcommand" _v="op"></b></div></div></div><div id="sqm_70" class="treenode_wrap"><div class="treenode_item_wrap evt" evt="clk_domcommand" _v="click"><div draggable="true" class="sqm_title draggable treenode_item_text ellipsis treenode_item_text_hover treenode_item_text_sel" _align="2" _delay="400" _title="收件箱中没有邮件" style="padding-left: 22px;" _padding="22"><b class="treenode_newtip_wrap fs0"><b class="ico ico_misc_newtip ico_treenode_newtip"></b></b>收件箱<b class="ico ico_tree_op evt treenode_item_hover_show ico_treenode_right" evt="clk_domcommand" _v="op"></b></div></div></div><div id="sqm_71" class="treenode_wrap"><div class="treenode_item_wrap evt" evt="clk_domcommand" _v="click"><div draggable="true" class="sqm_title draggable treenode_item_text ellipsis treenode_item_text_hover" style="padding-left: 22px;" _padding="22"><b class="treenode_newtip_wrap fs0"><b class="ico ico_misc_newtip ico_treenode_newtip"></b></b><b class="treenode_item_flag_wrap fs0"><b class="ico ico_wrap treenode_item_flag ico_action_flag_red"></b></b>跟进事项<b class="ico ico_tree_op evt treenode_item_hover_show ico_treenode_right" evt="clk_domcommand" _v="op"></b></div></div></div><div id="sqm_72" class="treenode_wrap"><div class="treenode_item_wrap evt" evt="clk_domcommand" _v="click"><div draggable="true" class="sqm_title draggable treenode_item_text ellipsis treenode_item_text_hover" style="padding-left: 22px;" _padding="22"><b class="treenode_item_flag_wrap fs0"><b class="ico ico_wrap treenode_item_flag ico_action_complete"></b></b>完成事项<b class="ico ico_tree_op evt treenode_item_hover_show ico_treenode_right" evt="clk_domcommand" _v="op"></b></div></div></div><div id="sqm_73" class="treenode_wrap"><div class="treenode_item_wrap evt" evt="clk_domcommand" _v="click"><div draggable="true" class="sqm_title draggable treenode_item_text ellipsis treenode_item_text_hover" _align="2" _delay="400" _title="已发送中没有邮件" style="padding-left: 22px;" _padding="22"><b class="treenode_newtip_wrap fs0"><b class="ico ico_misc_newtip ico_treenode_newtip"></b></b>已发送<b class="ico ico_tree_op evt treenode_item_hover_show ico_treenode_right" evt="clk_domcommand" _v="op"></b></div></div></div><div id="sqm_74" class="treenode_wrap"><div class="treenode_item_wrap evt" evt="clk_domcommand" _v="click"><div draggable="true" class="sqm_title draggable treenode_item_text ellipsis treenode_item_text_hover" _align="2" _delay="400" _title="草稿箱中有1封邮件" style="padding-left: 22px;" _padding="22"><b class="treenode_newtip_wrap fs0"><b class="ico ico_misc_newtip ico_treenode_newtip"></b></b>草稿箱 [1]<b class="ico ico_tree_op evt treenode_item_hover_show ico_treenode_right" evt="clk_domcommand" _v="op"></b></div></div></div><div id="sqm_75" class="treenode_wrap"><div class="treenode_item_wrap evt" evt="clk_domcommand" _v="click"><div draggable="true" class="sqm_title draggable treenode_item_text ellipsis treenode_item_text_hover" _align="2" _delay="400" _title="已删除中没有邮件" style="padding-left: 22px;" _padding="22"><b class="treenode_newtip_wrap fs0"><b class="ico ico_misc_newtip ico_treenode_newtip"></b></b>已删除<b class="ico ico_tree_empty evt ico_treenode_right" evt="clk_domcommand" _v="empty"></b></div></div></div><div id="sqm_76" class="treenode_wrap"><div class="treenode_item_wrap evt" evt="clk_domcommand" _v="click"><div draggable="true" class="sqm_title draggable treenode_item_text ellipsis treenode_item_text_hover" _align="2" _delay="400" _title="垃圾邮件中没有邮件" style="padding-left: 22px;" _padding="22"><b class="treenode_newtip_wrap fs0"><b class="ico ico_misc_newtip ico_treenode_newtip"></b></b>垃圾邮件<b class="ico ico_tree_empty evt ico_treenode_right" evt="clk_domcommand" _v="empty"></b></div></div></div></div></div></div>
+                <div class="navpane_tree_custom navpane_tree_wrap tree_wrap" id="sqm_41"><div id="sqm_47" class="treenode_wrap"><div class="treenode_item_wrap evt" evt="clk_domcommand" _v="toggle"><div draggable="true" class="sqm_title draggable treenode_item_text ellipsis" style="padding-left:22px;" _padding="22"><b class="treenode_newtip_wrap fs0"><b class="ico ico_misc_newtip ico_treenode_newtip"></b></b>其他文件夹<b _align="2" _delay="400" _title="新建文件夹" class="sqm_title ico ico_tree_add evt ico_treenode_right" evt="clk_domcommand" _v="add"></b></div><b class="ico_treenode_expcol_wrap ico_treenode_expcol_nochild ico_wrap evt" style="left:10px;" evt="clk_domcommand" _padding="10" _v="toggle"><b class="ico ico_treenode_expcol"></b></b></div><div class="treenode_children_wrap" style="display:none;"></div></div></div>
+                <div class="navpane_tree_tag navpane_tree_wrap tree_wrap" id="sqm_42"><div id="sqm_48" class="treenode_wrap"><div class="treenode_item_wrap evt" evt="clk_domcommand" _v="toggle"><div draggable="true" class="sqm_title draggable treenode_item_text ellipsis" style="padding-left:22px;" _padding="22">标签<b _align="2" _delay="400" _title="新建标签" class="sqm_title ico ico_tree_add evt ico_treenode_right" evt="clk_domcommand" _v="add"></b></div><b class="ico_treenode_expcol_wrap ico_treenode_expcol_nochild ico_wrap evt" style="left:10px;" evt="clk_domcommand" _padding="10" _v="toggle"><b class="ico ico_treenode_expcol"></b></b></div><div class="treenode_children_wrap" style="display:none;"></div></div></div>
+                <div class="navpane_tree_pop navpane_tree_wrap tree_wrap" id="sqm_43"><div id="sqm_49" class="treenode_wrap"><div class="treenode_item_wrap evt" evt="clk_domcommand" _v="toggle"><div draggable="true" class="sqm_title draggable treenode_item_text ellipsis" style="padding-left:22px;" _padding="22"><b class="treenode_newtip_wrap fs0"><b class="ico ico_misc_newtip ico_treenode_newtip"></b></b>其他邮箱<b _align="2" _delay="400" _title="管理其他邮箱" class="sqm_title ico ico_tree_popcfg evt ico_treenode_right" evt="clk_domcommand" _v="popcfg"></b></div><b class="ico_treenode_expcol_wrap ico_treenode_expcol_nochild ico_wrap evt" style="left:10px;" evt="clk_domcommand" _padding="10" _v="toggle"><b class="ico ico_treenode_expcol"></b></b></div><div class="treenode_children_wrap" style="display:none;"></div></div></div>
+                <div class="navpane_tree_alias navpane_tree_wrap tree_wrap" style="display:none;" id="sqm_44"><div id="sqm_50" class="treenode_wrap"><div class="treenode_item_wrap evt" evt="clk_domcommand" _v="toggle"><div draggable="true" class="sqm_title draggable treenode_item_text ellipsis" style="padding-left:22px;" _padding="22">域名邮箱</div><b class="ico_treenode_expcol_wrap ico_treenode_expcol_nochild ico_wrap evt" style="left:10px;" evt="clk_domcommand" _padding="10" _v="toggle"><b class="ico ico_treenode_expcol"></b></b></div><div class="treenode_children_wrap" style="display:none;"></div></div></div>
+            </div>
+        </div>
+        <div class="absolute_full navpane_note" style="display:none;">
+            <div class="navpane_top_wrap evt" evt="clk_domcommand" _v="back_top">
+                <div class="navpane_title fs0">
+                    <div class="inline_block navpane_note_title fs14 bold">
+                        <b class="ico ico_wrap evt sqm_title ico_misc_add_plus ico_note_folder_create" _title="新建文件夹" evt="clk_domcommand" _v="addFolder"></b>
+                        我的笔记
+                    </div>
+                </div>
+            </div>
+            <div class="navpane_content_wrap scroll scroll_auto_y">
+                <div class="note_panel_folder_list"></div>
+            </div>
+        </div>
+        <div class="absolute_full navpane_beebox" style="display:none;">
+            <div class="navpane_top_wrap evt" evt="clk_domcommand" _v="back_top">
+                <div class="navpane_title fs0">
+                    <div class="inline_block navpane_beebox_title fs14 bold">
+                        <b class="ico ico_wrap evt sqm_title ico_misc_add_plus ico_beebox_tag_create" _title="创建蜂箱分类" evt="clk_domcommand" _v="add_beebox_tag"></b>
+                        蜂箱
+                    </div>
+                </div>
+            </div>
+            <div class="navpane_content_wrap scroll scroll_auto_y">
+                <div class="beebox_panel_tag_list"></div>
+                <div class="beebox_panel_notcare_list"></div>
+            </div>
+        </div>
+        <div class="absolute_full navpane_combogroup" style="display:none;">
+            <div class="navpane_top_wrap evt" evt="clk_domcommand" _v="back_top">
+                <div class="navpane_title fs0">
+                    <div class="inline_block navpane_combogroup_title fs14 bold">
+                        <b class="ico ico_wrap evt sqm_title ico_misc_add_plus ico_combogroup_create" _title="新建群组" evt="clk_domcommand" _v="add_combogroup"></b>
+                        群组
+                    </div>
+                </div>
+            </div>
+            <div class="navpane_content_wrap scroll scroll_auto_y">
+                <div class="navpane_tree_combogroup navpane_tree_wrap tree_wrap"></div>
+            </div>
+        </div>
+        <div class="absolute_full navpane_disk" style="display:none;">
+            <div class="navpane_top_wrap evt" evt="clk_domcommand" _v="back_top">
+                <div class="navpane_title fs0">
+                    <div class="inline_block navpane_disk_title fs14 bold">
+                        我的网盘
+                    </div>
+                </div>
+            </div>
+            <div class="disk_dir_nav_wrap navpane_content_wrap disk_nav_pane">
+    <div class="evt disk_dir_item disk_dir_my" evt="clk_domcommand" _v="my">
+        个人文件
+    </div>
+    <div class="disk_group_wrap" style="display: none">
+        <div class="evt disk_dir_item disk_dir_group" evt="clk_domcommand" _v="toggle" _e="0">
+            <b class="ico ico_wrap disk_dir_expcol ico_tree_col"></b>
+            群组共享文件
+        </div>
+
+        <div class="disk_group_items_wrap" style="display: none"></div>
+    </div>
+
+            <div class="evt disk_dir_item disk_dir_station" evt="clk_domcommand" _v="station">
+            大附件中转站
+        </div>
+
+        <div class="evt disk_dir_item disk_dir_share_in" evt="clk_domcommand" _v="share_in">
+            分享给我的
+        </div>
+
+        <div class="evt disk_dir_item disk_dir_share_out" evt="clk_domcommand" _v="share_out">
+            我分享的
+        </div>
+    </div>
+        </div>
+    </div>
+</div>
+        <div id="root_frame_wrap" class="root_frame_wrap" style="left: 0px;">
+            <div id="root_navpane_toggle" class="root_navpane_toggle evt sqm_title" _globaltitle="NAVPANE_TOGGLE_TITLE" evt="clk_domcommand" _v="navpane_toggle" style="display: none;">
+                <div class="hover_wrap">
+                    <b class="ico ico_nav_expand"></b>
+                </div>
+            </div>
+        <div class="absolute_full" style="display: none;" id="sqm_30"><div class="split_frame_drag absolute" style="display:none;"></div> <div class="split_frame_mask absolute_full" style="display:none;"></div> <div class="split_view_master_wrap absolute" style="z-index: 30; width: 100%; height: 100%; top: 0px; left: 0px; right: auto; bottom: auto;" id="sqm_32"><div class="maillist_wrap absolute_full maillist_op maillist_singleline" id="sqm_34"> <div class="maillist_header_wrap absolute_top_full unselectable"> <div class="evt unselectable checkbox_wrap fs0 maillist_header_sel_wrap" evt="clk_domcommand" _v="listSelectToggle"> <div class="select_wrap checkbox_select_wrap"> <b class="ico ico_wrap ico_select_checkbox checkbox_record"></b> &nbsp; </div> </div> <div class="maillist_header_edit_on text_link evt" evt="clk_domcommand" _v="enterEditMode">编辑</div> <div class="maillist_header_edit_off text_link evt" evt="clk_domcommand" _v="cancelEditMode">取消</div> <div class="maillist_header_title_wrap relative fs0"> <span class="maillist_header_title_backtop evt sqm_title" evt="clk_domcommand" _v="top_back_top" _title="回到顶部"></span> <span class="maillist_header_title_inner inline_block relative"> <span class="maillist_header_title inline_block fs14 ellipsis sqm_title evt" _delay="400" evt="clk_domcommand" _v="close_filter" _title="收件箱">收件箱</span> <span class="maillist_header_title_comment inline_block fs14" style="display: none;"></span> <span class="maillist_header_title_desc inline_block fs12 relative" style="">(<span class="maillist_header_title_number">0</span>封邮件)</span> <b class="ico ico_menu_arrow_dd maillist_header_title_filter evt" evt="clk_domcommand" _v="listViewFilter"></b> </span> </div> </div> <div class="absolute_horizon_full maillist_newmail_wrap unselectable evt" evt="clk_domcommand" _v="newmail_back_top" style="display:none;"> <a class="evt ico_wrap maillist_notify_close hover_wrap sqm_title" evt="clk_domcommand" href="javascript:void(0);" _v="close_notify" hidefocus="true" _delay="400" _title="关闭"> <b class="ico ico_misc_close_small"></b> </a> <div class="maillist_newmail_txt_wrap"></div> </div> <div class="absolute_top_full maillist_content_wrap"> <div class="grid_empty_wrap absolute_top_full text_ordinary" style="">该文件夹下没有邮件！</div> <div class="absolute_full maillist_paged_wrap" style="visibility: hidden;"> <div class="absolute_top_full maillist_paged_block_wrap"> <div class="absolute_full maillist_paged_block scroll scroll_auto_y evt" evt="ctxmu_h_domcontextmenu" id="sqm_36"></div> <div class="absolute_full maillist_loading_wrap" style="display: none;"> <div class="absolute_full maillist_loading_mask maillist_paged_loading_mask"></div> <div class="ico_wrap ico_wrap_middle maillist_loading_ico_wrap"> <img src="./阿里邮箱个人版_files/round_big.gif" class="ico ico_middle maillist_loading_ico"> </div> </div> </div> <div class="absolute_bottom_full maillist_paged_pager_wrap"> <div class="pager_desc">第0页，共0页</div> <div class="pager_full_wrap maillist_paged_pager text_right" id="sqm_35"> <b class="pager_button inline_block evt ico_turning_small_first ico_pager_first ico_turning_small_first_disable ico_pager_disable" evt="clk_domcommand" _v="goFirst">&nbsp;</b> <b class="pager_button inline_block evt ico_turning_small_prev ico_pager_prev ico_turning_small_prev_disable ico_pager_disable" evt="clk_domcommand" _v="goPrev">&nbsp;</b> <b class="pager_button inline_block evt ico_turning_small_next ico_pager_next ico_turning_small_next_disable ico_pager_disable" evt="clk_domcommand" _v="goNext">&nbsp;</b> <b class="pager_button inline_block evt ico_turning_small_last ico_pager_last ico_turning_small_last_disable ico_pager_disable" evt="clk_domcommand" _v="goLast">&nbsp;</b> </div> </div> </div> <div class="maillist_virtual_wrap absolute_full" style="display:none;"> <div class="maillist_scroll_shadow scroll_shadow absolute_horizon_full" style="display:none;"></div> <div class="maillist_virtual_block_wrap absolute_horizon_full"></div> <div class="maillist_loading_wrap absolute_full" style="display:none;"> <div class="absolute_full maillist_loading_mask maillist_virtual_loading_mask"></div> </div> <a class="fs0 absolute_right_full ease_in scrollbar_track scrollbar_linear maillist_virtual_scroll_wrap" hidefocus="true" href="javascript:void(0);"> <b class="maillist_virtual_scroll_slider absolute scrollbar_thumb fs0"></b> </a> <a class="maillist_virtual_back_top ico_wrap hover_wrap evt sqm_title" style="display:none;" _align="2" _delay="400" _title="回到顶部" hidefocus="true" href="javascript:void(0);" evt="clk_domcommand" _v="list_back_top"> <b class="ico_action_top ico"></b> </a> </div> </div> </div><b class="ico_wrap ico_wrap_middle split_view_switcher"><b class="ico evt ico_middle split_view_switcher_ico" evt="clk_domcommand" _v="mail_split_switcher"></b></b></div> <div class="split_view_slave_wrap absolute" style="height: 100%; width: auto; left: 514px; right: 0px; top: 0px; bottom: auto; visibility: visible; display: none;" id="sqm_33"><div class="absolute_full scroll scroll_large scroll_auto_y mail_home_wrap"> <div class="mail_home_top_wrap" style=""><div class="quick_newmail_view_wrap" id="sqm_61"> <div class="quick_newmail_form_wrap" id="sqm_62"> <div style="display: none;"> <div class="evt ellipsis selector inline_block compose_field_from" evt="clk_domcommand" _v="open" id="sqm_63"> <span class="selector_label text_link">yangjiandu &lt;yangjiandu@aliyun.com&gt;</span> <div class="ico_wrap selector_open"> <b class="ico ico_selector_dd"></b> </div> </div> </div> <div class="node_editor quick_newmail_editor" id="sqm_64" style="height: auto;"><div class="editor_toolbar" style="display: none;" id="sqm_65"></div><div class="editor_container_wrap"><div class="editor_body_holder"><div class="aym_editor_body scroll scroll_auto" contenteditable="true" spellcheck="false"><div style="clear: both;"><span style="font-family:Tahoma,Arial,STHeiti,SimSun;font-size:14px;color:#000000"><br></span></div></div><iframe style="display: none;" src="./阿里邮箱个人版_files/saved_resource.html"></iframe><iframe style="display: none;" src="./阿里邮箱个人版_files/saved_resource(1).html"></iframe><div class="editor_place_holder">使用快速写信，直接@TA，系统就会自动将此人加到收件人中，一箭必中快速响应</div></div></div></div>  </div>  <div class="quick_newmail_forward text_link evt" evt="clk_domcommand" _v="navigate_compose"> 去写信页写信 </div> <div class="button_wrap button_wrap_left"> <div class="evt button inline_block button_middle button_dlg_ok" evt="clk_domcommand" _v="send"> 发送 </div> </div> </div></div> <div class="mail_home_bottom_wrap"> <div class="userstack_wrap" id="sqm_58"> <div class="userstack_list_wrap"><div class="evt userstack_list_item inline_block draggable" draggable="true" id="sqm_59" evt="clk_domcommand" _v="viewItem" _id="3" _te="viewitem_3"><b class="userstack_list_item_bottom ico ico_wrap"></b><span class="userstack_list_item_new" style="display:none;"></span><img class="userstack_list_item_loading" style="display: none;" src="./阿里邮箱个人版_files/round_big.gif"><span class="userstack_list_item_title fs14 ellipsis"><b class="ico ico_nav_flag_red_stack ico_userstack_list_item"></b>跟进事项</span><span class="userstack_list_item_cover fs0"><b class="ico_preview_empty userstack_empty_ico ico ico_wrap"></b><span class="fs12 userstack_empty_text">暂时没有相关邮件</span></span><span class="userstack_list_item_dragover"></span></div><div class="evt userstack_list_item inline_block draggable" draggable="true" id="sqm_60" evt="clk_domcommand" _v="viewItem" _id="4" _te="viewitem_4"><b class="userstack_list_item_bottom ico ico_wrap"></b><span class="userstack_list_item_new" style="display:none;"></span><span class="userstack_list_item_action"><b class="userstack_list_item_edit ico_attach_edit ico ico_wrap evt sqm_title" _title="编辑" evt="clk_domcommand" _v="editItem"></b></span><img class="userstack_list_item_loading" style="display: none;" src="./阿里邮箱个人版_files/round_big.gif"><span class="userstack_list_item_title fs14 ellipsis"><b class="ico ico_nav_fromvip_stack ico_userstack_list_item"></b>星标联系人邮件</span><span class="userstack_list_item_cover fs0"><b class="ico_preview_empty userstack_empty_ico ico ico_wrap"></b><span class="fs12 userstack_empty_text">暂时没有相关邮件</span></span><span class="userstack_list_item_dragover"></span></div><a class="evt userstack_list_item_add_wrap inline_block hover_wrap" evt="clk_domcommand" _v="add_stack" href="javascript:void(0);"><b class="ico ico_wrap ico_nav_stack_add userstack_list_item_add"></b><span class="userstack_list_item_add_text fs14">将关注的邮件拖放到此处，跟踪新回复</span><span class="userstack_list_item_add_drag fs12">将关注的邮件拖放到此处，跟踪新回复</span><span class="userstack_list_item_dragover"></span></a></div> </div> </div> </div></div> <div class="split_view_right_wrap absolute scroll_hidden" style="display: none; height: 100%; width: auto; left: 514px; right: 0px; top: 0px; bottom: auto;"></div></div><div class="absolute_full" style="" id="sqm_85"><div class="absolute_full compose_mail_view " id="sqm_87"> <div class="compose_att_tips" style="display: none;" id="sqm_125"> <span class="compose_att_send" style="display: none;"> 正在上传附件，上传完成后将自动发送 <a class="evt text_default" href="javascript:void(0);" hidefocus="true" evt="clk_domcommand" _v="cancel_send"> [取消自动发送] </a> </span> <span class="compose_att_save" style="display: none;"> 正在上传附件，上传完成后将自动保存到草稿箱 </span> </div> <div class="absolute_horizon_full drag_drop_container compose_drag_drop"> <div class="absolute_full drag_drop_content"> 请把文件拖放到这个区域，就可作为附件添加 </div> <div class="absolute_full drag_drop_box"></div> <div class="ico_wrap dragdrop_close evt hover_wrap" evt="clk_domcommand" _v="close_dragdrop"><b class="ico ico_misc_close_small"></b></div> </div> <div class="absolute_top_full compose_frame_top"> <div class="unselectable button_wrap button_wrap_left compose_toolbar_wrap"> <div class="evt button inline_block button_middle button_ok" evt="clk_domcommand" _v="send"> 发送 </div> <div class="evt button inline_block button_middle button_tinge" evt="clk_domcommand" _v="save_draft"> 存草稿 </div> <div class="inline_block compose_toggle_splitter"></div> <div class="evt inline_block compose_toggle_trigger text_link compose_toggle_cc" evt="clk_domcommand" _v="toggle_cc">添加抄送</div> <div class="evt inline_block compose_toggle_trigger text_link compose_toggle_bcc" evt="clk_domcommand" _v="toggle_bcc">添加密送</div> <div class="evt inline_block compose_toggle_trigger text_link compose_toggle_spto" evt="clk_domcommand" _v="toggle_spto">分别发送</div> </div> </div> <div class="absolute_bottom_full compose_frame_bottom"> <div class="absolute_full scroll scroll_large scroll_auto_y compose_scroll_wrap"> <div class="compose_form_wrap" id="sqm_88"> <div class="field_wrap rcpwell_wrap compose_field_border combo_rcpwell_wrap compose_to_wrap entry_editable" id="sqm_98"> <div class="field_label_wrap compose_label_wrap text_link evt sqm_title cursor_pointer" _title="批量添加联系人点这里就可以哦！是不是很方便！" evt="clk_domcommand" _v="label"> 收件人 </div> <div class="entry_editor_wrap "> <div class="focus_input_wrap entry_focus_hwrap" id="sqm_99"> <input type="text"> <div style="position: absolute;top:0;left:-20000px" id="sqm_100"><textarea></textarea></div></div> <div class="evt scroll scroll_auto_y entry_editor_scroll_wrap" evt="msdn_wrapmousedown msup_wrapmouseup" style="min-height: 22px; max-height: 100px;"> <div class="entry_editor_item_wrap"> <span _delay="100" draggable="true" _id="sz-liwei@1000phone.com" class="entry_wrap sqm_title draggable" id="sqm_184" _title="sz-liwei@1000phone.com"><span _v="select" evt="msdn_entrymousedown msup_entrymouseup clk_h_domcommand" class="evt entry_label_wrap">sz-liwei</span><span class="entry_email">&lt;sz-liwei@1000phone.com&gt;</span><span class="entry_end">;</span><span class="evt entry_edit_wrap ico_wrap" evt="msdn_entrymousedown clk_domcommand" _v="edit"><b class="ico ico_pencil"></b></span></span><div class="entry_pos_holder entry_input_wrap fs0" id="sqm_101" style="max-width: 350px;"> <input type="text" class="entry_input evt" evt="ctxmu_h" tabindex="101"> <span style="font-size:12px;visibility: hidden;">WW</span><div style="position: absolute;top:0;left:-20000px" id="sqm_102"><textarea></textarea></div></div> <div class="clear"></div> </div> </div> </div> </div> <div class="field_wrap rcpwell_wrap compose_field_border combo_rcpwell_wrap compose_cc_wrap entry_editable" style="display:none;" id="sqm_103"> <div class="field_label_wrap compose_label_wrap text_link evt sqm_title cursor_pointer" _title="批量添加联系人点这里就可以哦！是不是很方便！" evt="clk_domcommand" _v="label"> 抄　送 </div> <div class="entry_editor_wrap "> <div class="focus_input_wrap entry_focus_hwrap" id="sqm_104"> <input type="text"> <div style="position: absolute;top:0;left:-20000px" id="sqm_105"><textarea></textarea></div></div> <div class="evt scroll scroll_auto_y entry_editor_scroll_wrap" evt="msdn_wrapmousedown msup_wrapmouseup" style="min-height: 22px; max-height: 100px;"> <div class="entry_editor_item_wrap"> <div class="entry_pos_holder entry_input_wrap fs0" id="sqm_106" style="max-width: 350px;"> <input type="text" class="entry_input evt" evt="ctxmu_h" tabindex="102"> <span style="font-size:12px;visibility: hidden;">WW</span><div style="position: absolute;top:0;left:-20000px" id="sqm_107"><textarea></textarea></div></div> <div class="clear"></div> </div> </div> </div> </div> <div class="field_wrap rcpwell_wrap compose_field_border combo_rcpwell_wrap compose_bcc_wrap entry_editable" style="display:none;" id="sqm_108"> <div class="field_label_wrap compose_label_wrap text_link evt sqm_title cursor_pointer" _title="批量添加联系人点这里就可以哦！是不是很方便！" evt="clk_domcommand" _v="label"> 密　送 </div> <div class="entry_editor_wrap "> <div class="focus_input_wrap entry_focus_hwrap" id="sqm_109"> <input type="text"> <div style="position: absolute;top:0;left:-20000px" id="sqm_110"><textarea></textarea></div></div> <div class="evt scroll scroll_auto_y entry_editor_scroll_wrap" evt="msdn_wrapmousedown msup_wrapmouseup" style="min-height: 22px; max-height: 100px;"> <div class="entry_editor_item_wrap"> <div class="entry_pos_holder entry_input_wrap fs0" id="sqm_111" style="max-width: 350px;"> <input type="text" class="entry_input evt" evt="ctxmu_h" tabindex="103"> <span style="font-size:12px;visibility: hidden;">WW</span><div style="position: absolute;top:0;left:-20000px" id="sqm_112"><textarea></textarea></div></div> <div class="clear"></div> </div> </div> </div> </div> <div class="field_wrap rcpwell_wrap compose_field_border combo_rcpwell_wrap compose_spto_wrap entry_editable" style="display:none;" id="sqm_113"> <div class="field_label_wrap compose_label_wrap text_link evt sqm_title cursor_pointer" _title="批量添加联系人点这里就可以哦！是不是很方便！" evt="clk_domcommand" _v="label"> 分送给 </div> <div class="entry_editor_wrap "> <div class="focus_input_wrap entry_focus_hwrap" id="sqm_114"> <input type="text"> <div style="position: absolute;top:0;left:-20000px" id="sqm_115"><textarea></textarea></div></div> <div class="evt scroll scroll_auto_y entry_editor_scroll_wrap" evt="msdn_wrapmousedown msup_wrapmouseup" style="min-height: 22px; max-height: 100px;"> <div class="entry_editor_item_wrap"> <div class="entry_pos_holder entry_input_wrap fs0" id="sqm_116" style="max-width: 350px;"> <input type="text" class="entry_input evt" evt="ctxmu_h" tabindex="101"> <span style="font-size:12px;visibility: hidden;">WW</span><div style="position: absolute;top:0;left:-20000px" id="sqm_117"><textarea></textarea></div></div> <div class="clear"></div> </div> </div> </div> </div> <div class="field_wrap compose_field_wrap compose_field_wrap_hover compose_field_border compose_field_subject_wrap"> <div class="field_label_wrap compose_label_wrap"> 主　题 </div> <div class="evt textbox_wrap compose_field_subject" evt="clk_domcommand" _v="focus" id="sqm_92"> <div class="textbox_inner"> <input type="text" class="textbox_input" tabindex="104"> </div> </div> <div class="compose_field_beebox_wrap"> <div class="compose_field_beebox_label">精准投递</div> <div class="evt ellipsis selector inline_block compose_field_beebox_selector" evt="clk_domcommand" _v="open" style="display: none;"> <span class="selector_label text_default">&nbsp;</span> <div class="ico_wrap selector_open"> <b class="ico ico_selector_dd"></b> </div> </div> </div> </div> <div class="compose_field_calendar" style="display: none;"> <div class="field_wrap compose_field_wrap compose_display_field_when" id="sqm_118"> <div class="field_label_wrap compose_calendar_label_wrap"> 时　间 </div> <span class="display_label">[无]</span> </div> <div class="field_wrap compose_field_wrap compose_display_field_location" id="sqm_119"> <div class="field_label_wrap compose_calendar_label_wrap"> 地　点 </div> <span class="display_label">[无地点]</span> </div> <div class="field_wrap compose_field_wrap compose_display_field_organizer" id="sqm_120"> <div class="field_label_wrap compose_calendar_label_wrap"> 组织者 </div> <span class="display_label">[无]</span> </div> </div> <div class="field_wrap fs0"> <div class="uploader_wrap inline_block compose_att_label compose_att_fake"> <div class="evt ico_wrap compose_att_dd" _v="big_attach" evt="clk_domcommand" style=""> <b class="ico ico_editor_dd"></b> </div> <div class="uploader_attach_wrap inline_block" id="sqm_89"> <div class="uploader_label_wrap inline_block fs12"> <div class="absolute_full uploader_input_wrap"><input type="file" class="alpha_0 uploader_input" multiple="true"></div> <span class="uploader_label">添加附件<span class="uploader_limit_size">(4GB)</span></span> </div> <b class="ico_wrap ico_attach_normal uploader_attach_ico"></b> </div> </div> <div class="inline_block compose_att_stat"> <span class="compose_att_stat_txt"></span> </div> </div> <div class="scroll_hidden compose_att_wrap" style="display: none;"> <div class="attach_boxlist_wrap " id="sqm_90"> <div class="attach_boxlist_container relative"></div> </div> </div> <div class="compose_field_splitter"></div> <div class="evt textarea_wrap fs0 compose_plain_editor_wrap" evt="clk_domcommand" _v="focus" style="display:none;" id="sqm_97"> <textarea class="textarea_input scroll scroll_auto_y" tabindex="105"></textarea> </div> <div class="compose_html_editor_wrap html_editor_wrap" id="sqm_94" style="height: auto;"><div class="editor_toolbar" style="visibility: hidden;" id="sqm_95"><div _v="exec" _id="togglefull" _title="切换到全部功能" evt="msdn_fh_mousedown clk_domcommand" class="evt sqm_title editor_toolbar_item editor_button_wrap editor_button_toggle_full" id="sqm_128"><b class="ico editor_button_ico ico_editor_expand"></b></div><div class="editor_toolbar_static"><div class="editor_toolbar_line"><div _v="exec" _id="undo" _title="撤销（Ctrl+Z）" evt="msdn_fh_mousedown clk_domcommand" class="evt sqm_title editor_toolbar_item editor_button_wrap" id="sqm_129"><b class="ico editor_button_ico ico_editor_undo"></b></div><div _v="exec" _id="redo" _title="重做（Ctrl+Y）" evt="msdn_fh_mousedown clk_domcommand" class="evt sqm_title editor_toolbar_item editor_button_wrap editor_button_disable" id="sqm_130"><b class="ico editor_button_ico ico_editor_redo"></b></div><div _v="open" _id="fontfamily" evt="msdn_fh_mousedown clk_domcommand" class="evt selector editor_toolbar_item editor_selector_wrap ellipsis editor_selector_border editor_font_family" id="sqm_131"><span class="selector_label text_default">Tahoma</span><div class="ico_wrap editor_selector_open"><b class="ico ico_editor_dd"></b></div></div><div _v="open" _id="fontsize" evt="msdn_fh_mousedown clk_domcommand" class="evt selector editor_toolbar_item editor_selector_wrap ellipsis editor_selector_border editor_font_size" id="sqm_132"><span class="selector_label text_default">14px</span><div class="ico_wrap editor_selector_open"><b class="ico ico_editor_dd"></b></div></div><div _v="click" _id="forecolor" _title="文字颜色" evt="msdn_fh_mousedown clk_domcommand" class="evt sqm_title editor_toolbar_item editor_menu_button_wrap" id="sqm_133"><b class="ico editor_button_ico ico_editor_forecolor"></b><div class="evt ico_wrap editor_menu_button_open" _v="open" evt="msdn_fh_mousedown clk_domcommand"><b class="ico ico_editor_dd"></b></div></div><div _v="click" _id="backcolor" _title="背景颜色" evt="msdn_fh_mousedown clk_domcommand" class="evt sqm_title editor_toolbar_item editor_menu_button_wrap" id="sqm_134"><b class="ico editor_button_ico ico_editor_backcolor"></b><div class="evt ico_wrap editor_menu_button_open" _v="open" evt="msdn_fh_mousedown clk_domcommand"><b class="ico ico_editor_dd"></b></div></div><div _v="exec" _id="bold" _title="粗体（Ctrl+B）" evt="msdn_fh_mousedown clk_domcommand" class="evt sqm_title editor_toolbar_item editor_button_wrap" id="sqm_135"><b class="ico editor_button_ico ico_editor_bold"></b></div><div _v="click" _id="bullist" _title="项目符号" evt="msdn_fh_mousedown clk_domcommand" class="evt sqm_title editor_toolbar_item editor_menu_button_wrap" id="sqm_136"><b class="ico editor_button_ico ico_editor_bullist"></b><div class="evt ico_wrap editor_menu_button_open" _v="open" evt="msdn_fh_mousedown clk_domcommand"><b class="ico ico_editor_dd"></b></div></div><div _v="click" _id="numlist" _title="项目编号" evt="msdn_fh_mousedown clk_domcommand" class="evt sqm_title editor_toolbar_item editor_menu_button_wrap" id="sqm_137"><b class="ico editor_button_ico ico_editor_numlist"></b><div class="evt ico_wrap editor_menu_button_open" _v="open" evt="msdn_fh_mousedown clk_domcommand"><b class="ico ico_editor_dd"></b></div></div><div _v="click" _id="imageupload" _title="插入图片" evt="msdn_fh_mousedown clk_domcommand" class="evt sqm_title editor_toolbar_item editor_menu_button_wrap" id="sqm_138"><b class="ico editor_button_ico ico_editor_image"></b><div class="evt ico_wrap editor_menu_button_open" _v="open" evt="msdn_fh_mousedown clk_domcommand"><b class="ico ico_editor_dd"></b></div></div><div _v="click" _id="table" _title="插入表格" evt="msdn_fh_mousedown clk_domcommand" class="evt sqm_title editor_toolbar_item editor_menu_button_wrap" id="sqm_139"><b class="ico editor_button_ico ico_editor_table"></b><div class="evt ico_wrap editor_menu_button_open" _v="open" evt="msdn_fh_mousedown clk_domcommand"><b class="ico ico_editor_dd"></b></div></div><div _v="exec" _id="emoticons" _title="表情" evt="msdn_fh_mousedown clk_domcommand" class="evt sqm_title editor_toolbar_item editor_button_wrap" id="sqm_140"><b class="ico editor_button_ico ico_editor_emoticons"></b></div><div _v="exec" _id="spellcheck" _title="英语拼写检查" evt="msdn_fh_mousedown clk_domcommand" class="evt sqm_title editor_toolbar_item editor_button_wrap" id="sqm_141"><b class="ico editor_button_ico ico_editor_spell"></b></div><div _v="open" _id="signature" evt="msdn_fh_mousedown clk_domcommand" class="evt selector editor_toolbar_item editor_selector_wrap ellipsis" id="sqm_142"><span class="selector_label text_default">插入签名</span><div class="ico_wrap editor_selector_open"><b class="ico ico_editor_dd"></b></div></div></div><div class="editor_toolbar_line" style="display: none;"><div _v="click" _id="lineheight" _title="行间距" evt="msdn_fh_mousedown clk_domcommand" class="evt sqm_title editor_toolbar_item editor_menu_button_wrap" id="sqm_143"><b class="ico editor_button_ico ico_editor_lineheight"></b><div class="evt ico_wrap editor_menu_button_open" _v="open" evt="msdn_fh_mousedown clk_domcommand"><b class="ico ico_editor_dd"></b></div></div><div _v="exec" _id="alignleft" _title="左对齐" evt="msdn_fh_mousedown clk_domcommand" class="evt sqm_title editor_toolbar_item editor_button_wrap editor_button_on" id="sqm_144"><b class="ico editor_button_ico ico_editor_alignleft"></b></div><div _v="exec" _id="aligncenter" _title="居中对齐" evt="msdn_fh_mousedown clk_domcommand" class="evt sqm_title editor_toolbar_item editor_button_wrap" id="sqm_145"><b class="ico editor_button_ico ico_editor_aligncenter"></b></div><div _v="exec" _id="alignright" _title="右对齐" evt="msdn_fh_mousedown clk_domcommand" class="evt sqm_title editor_toolbar_item editor_button_wrap" id="sqm_146"><b class="ico editor_button_ico ico_editor_alignright"></b></div><div _v="exec" _id="alignjustify" _title="两端对齐" evt="msdn_fh_mousedown clk_domcommand" class="evt sqm_title editor_toolbar_item editor_button_wrap" id="sqm_147"><b class="ico editor_button_ico ico_editor_alignjustify"></b></div><div _v="exec" _id="indent" evt="msdn_fh_mousedown clk_domcommand" class="evt sqm_title editor_toolbar_item editor_button_wrap" id="sqm_148"><b class="ico editor_button_ico ico_editor_indent"></b></div><div _v="exec" _id="italic" _title="斜体（Ctrl+I）" evt="msdn_fh_mousedown clk_domcommand" class="evt sqm_title editor_toolbar_item editor_button_wrap" id="sqm_149"><b class="ico editor_button_ico ico_editor_italic"></b></div><div _v="exec" _id="underline" _title="下划线（Ctrl+U）" evt="msdn_fh_mousedown clk_domcommand" class="evt sqm_title editor_toolbar_item editor_button_wrap" id="sqm_150"><b class="ico editor_button_ico ico_editor_underline"></b></div><div _v="exec" _id="strikethrough" _title="删除线" evt="msdn_fh_mousedown clk_domcommand" class="evt sqm_title editor_toolbar_item editor_button_wrap" id="sqm_151"><b class="ico editor_button_ico ico_editor_strikethrough"></b></div><div _v="exec" _id="removeformat" _title="清除格式" evt="msdn_fh_mousedown clk_domcommand" class="evt sqm_title editor_toolbar_item editor_button_wrap" id="sqm_152"><b class="ico editor_button_ico ico_editor_removeformat"></b></div><div _v="exec" _id="formatmatch" _title="格式刷" evt="msdn_fh_mousedown clk_domcommand" class="evt sqm_title editor_toolbar_item editor_button_wrap" id="sqm_153"><b class="ico editor_button_ico ico_editor_formatmatch"></b></div><div _v="click" _id="link" _title="插入/编辑链接" evt="msdn_fh_mousedown clk_domcommand" class="evt sqm_title editor_toolbar_item editor_menu_button_wrap" id="sqm_154"><b class="ico editor_button_ico ico_editor_link"></b><div class="evt ico_wrap editor_menu_button_open" _v="open" evt="msdn_fh_mousedown clk_domcommand"><b class="ico ico_editor_dd"></b></div></div></div></div></div><div class="editor_container_wrap"><div style="height: 913px; overflow: auto hidden;" class="editor_body_holder scroll scroll_large"><iframe id="iframe_sqm_96" frameborder="0" allowtransparency="true" class="scroll aym_editor_iframe" src="javascript:document.open();document.close();" style="height: 913px; width: 1642px;" src="./阿里邮箱个人版_files/saved_resource(2).html"></iframe><iframe style="display: none;" src="./阿里邮箱个人版_files/saved_resource(3).html"></iframe><iframe style="display: none;" src="./阿里邮箱个人版_files/saved_resource(4).html"></iframe></div><div class="layer_wrap layer_box_shadow evt menu_wrap quick_link_menu_wrap" style="display: none" id="sqm_186"><span class="quick_link_forward">转到</span><a class="evt quick_link_link" evt="clk_domcommand" _target="_blank"></a><input class="textbox_input quick_link_input" maxlength="64" style="display: none;"><b class="evt sqm_title ico ico_wrap cursor_pointer quick_link_edit ico_misc_link_edit" evt="clk_domcommand" _title="编辑" _v="edit"></b><b class="evt sqm_title ico ico_wrap cursor_pointer quick_link_ok ico_misc_link_ok" evt="clk_domcommand" _title="确定" _v="ok"></b><b class="evt sqm_title ico ico_wrap cursor_pointer quick_link_unlink ico_misc_link_remove" evt="clk_domcommand" _title="移除" _v="unlink"></b><b class="evt sqm_title ico ico_wrap cursor_pointer quick_link_close ico_misc_link_close" evt="clk_domcommand" _title="关闭" _v="close"></b></div><div class="evt editor_img_resize_box" evt="clk_domcommand" _v="click" id="sqm_188" style="display: none;"><div class="editor_img_resize_inner"></div><div class="editor_img_resize_e" style="cursor: e-resize;"></div><div class="editor_img_resize_s" style="cursor: s-resize;"></div><b class="editor_img_resize_es" style="cursor: se-resize;"></b></div></div></div> <div class="field_wrap compose_low_field_wrap fs0"> <div class="evt ellipsis selector inline_block compose_field_from" evt="clk_domcommand" _v="open" id="sqm_91"> <span class="selector_label compose_field_from_text">yangjiandu &lt;yangjiandu@aliyun.com&gt;</span> <div class="ico_wrap selector_open"> <b class="ico ico_selector_dd"></b> </div> </div> <div class="evt unselectable inline_block compose_mail_more_trigger" evt="clk_domcommand" _v="toggle_more"> <b class="ico ico_wrap compose_mail_more_arrow ico_misc_arrow_down_small"></b> 更多选项 </div> </div> <div class="field_wrap fs0 compose_low_field_wrap compose_mail_more" style="display: none"> <div class="evt unselectable checkbox_wrap inline_block compose_field_priority" evt="clk_domcommand" _v="select" id="sqm_121"> <div class="select_wrap checkbox_select_wrap"> <b class="ico ico_wrap ico_select_checkbox checkbox_record"></b> 紧急 </div> </div> <div class="evt unselectable checkbox_wrap inline_block compose_field_receipt" evt="clk_domcommand" _v="select" id="sqm_122"> <div class="select_wrap checkbox_select_wrap"> <b class="ico ico_wrap ico_select_checkbox checkbox_record"></b> 需要回执 </div> </div> <div class="evt unselectable checkbox_wrap inline_block compose_field_stsf select_on" evt="clk_domcommand" _v="select" id="sqm_123"> <div class="select_wrap checkbox_select_wrap"> <b class="ico ico_wrap ico_select_checkbox checkbox_record"></b> 保存到已发送 </div> </div> <div class="evt unselectable checkbox_wrap inline_block compose_field_plain" evt="clk_domcommand" _v="select" id="sqm_93"> <div class="select_wrap checkbox_select_wrap"> <b class="ico ico_wrap ico_select_checkbox checkbox_record"></b> 纯文本 </div> </div> <div class="inline_block compose_field_timing" id="sqm_124"> <b class="ico ico_wrap compose_clock"></b> <a class="evt text_link cursor_pointer compose_field_timing_open" href="javascript:void(0);" hidefocus="true" evt="clk_domcommand" _v="open">设置定时发送</a> <a class="evt cursor_pointer compose_field_timing_view" href="javascript:void(0);" hidefocus="true" evt="clk_domcommand" _v="open" style="display: none;"></a> <a class="evt text_link cursor_pointer compose_field_timing_clear" href="javascript:void(0);" hidefocus="true" evt="clk_domcommand" _v="clear" style="display: none;">清除定时</a> </div> </div> <div class="layer_wrap menu_wrap layer_box_shadow compose_attach_fake" style="left: -10000px;top: 0;"> <div class="uploader_label_wrap compose_attach_fake_label"> <div class="absolute_full uploader_input_wrap"></div> <span>添加超大附件</span> </div> <div class="evt uploader_label_wrap compose_disk_select" evt="clk_domcommand" _v="disk_select" style="display: none;"> <span>从网盘选择</span> </div> <div class="evt uploader_label_wrap compose_dragdrop_select" evt="clk_domcommand" _v="drag_drop" style="display: none;"> <span>拖拽上传</span> </div> </div> </div> <div class="unselectable button_wrap button_wrap_left compose_toolbar_wrap"> <div class="text_light compose_save_prompt">2019年1月27日 17:31 自动保存成功</div> <div class="compose_toolbar_abs"> <div class="evt button inline_block button_middle button_ok" evt="clk_domcommand" _v="send"> 发送 </div> <div class="evt button inline_block button_middle button_tinge" evt="clk_domcommand" _v="save_draft"> 存草稿 </div> </div> </div> </div> <div class="compose_editor_toolbar_float absolute_top_full" style=""> <div class="compose_editor_toolbar_wrap" style="padding-right: 43px;"> <div class="editor_toolbar compose_editor_toolbar" id="sqm_155"><div _v="exec" _id="togglefull" _title="切换到全部功能" evt="msdn_fh_mousedown clk_domcommand" class="evt sqm_title editor_toolbar_item editor_button_wrap editor_button_toggle_full" id="sqm_156"><b class="ico editor_button_ico ico_editor_expand"></b></div><div class="editor_toolbar_static"><div class="editor_toolbar_line"><div _v="exec" _id="undo" _title="撤销（Ctrl+Z）" evt="msdn_fh_mousedown clk_domcommand" class="evt sqm_title editor_toolbar_item editor_button_wrap" id="sqm_157"><b class="ico editor_button_ico ico_editor_undo"></b></div><div _v="exec" _id="redo" _title="重做（Ctrl+Y）" evt="msdn_fh_mousedown clk_domcommand" class="evt sqm_title editor_toolbar_item editor_button_wrap editor_button_disable" id="sqm_158"><b class="ico editor_button_ico ico_editor_redo"></b></div><div _v="open" _id="fontfamily" evt="msdn_fh_mousedown clk_domcommand" class="evt selector editor_toolbar_item editor_selector_wrap ellipsis editor_selector_border editor_font_family" id="sqm_159"><span class="selector_label text_default">Tahoma</span><div class="ico_wrap editor_selector_open"><b class="ico ico_editor_dd"></b></div></div><div _v="open" _id="fontsize" evt="msdn_fh_mousedown clk_domcommand" class="evt selector editor_toolbar_item editor_selector_wrap ellipsis editor_selector_border editor_font_size" id="sqm_160"><span class="selector_label text_default">14px</span><div class="ico_wrap editor_selector_open"><b class="ico ico_editor_dd"></b></div></div><div _v="click" _id="forecolor" _title="文字颜色" evt="msdn_fh_mousedown clk_domcommand" class="evt sqm_title editor_toolbar_item editor_menu_button_wrap" id="sqm_161"><b class="ico editor_button_ico ico_editor_forecolor"></b><div class="evt ico_wrap editor_menu_button_open" _v="open" evt="msdn_fh_mousedown clk_domcommand"><b class="ico ico_editor_dd"></b></div></div><div _v="click" _id="backcolor" _title="背景颜色" evt="msdn_fh_mousedown clk_domcommand" class="evt sqm_title editor_toolbar_item editor_menu_button_wrap" id="sqm_162"><b class="ico editor_button_ico ico_editor_backcolor"></b><div class="evt ico_wrap editor_menu_button_open" _v="open" evt="msdn_fh_mousedown clk_domcommand"><b class="ico ico_editor_dd"></b></div></div><div _v="exec" _id="bold" _title="粗体（Ctrl+B）" evt="msdn_fh_mousedown clk_domcommand" class="evt sqm_title editor_toolbar_item editor_button_wrap" id="sqm_163"><b class="ico editor_button_ico ico_editor_bold"></b></div><div _v="click" _id="bullist" _title="项目符号" evt="msdn_fh_mousedown clk_domcommand" class="evt sqm_title editor_toolbar_item editor_menu_button_wrap" id="sqm_164"><b class="ico editor_button_ico ico_editor_bullist"></b><div class="evt ico_wrap editor_menu_button_open" _v="open" evt="msdn_fh_mousedown clk_domcommand"><b class="ico ico_editor_dd"></b></div></div><div _v="click" _id="numlist" _title="项目编号" evt="msdn_fh_mousedown clk_domcommand" class="evt sqm_title editor_toolbar_item editor_menu_button_wrap" id="sqm_165"><b class="ico editor_button_ico ico_editor_numlist"></b><div class="evt ico_wrap editor_menu_button_open" _v="open" evt="msdn_fh_mousedown clk_domcommand"><b class="ico ico_editor_dd"></b></div></div><div _v="click" _id="imageupload" _title="插入图片" evt="msdn_fh_mousedown clk_domcommand" class="evt sqm_title editor_toolbar_item editor_menu_button_wrap" id="sqm_166"><b class="ico editor_button_ico ico_editor_image"></b><div class="evt ico_wrap editor_menu_button_open" _v="open" evt="msdn_fh_mousedown clk_domcommand"><b class="ico ico_editor_dd"></b></div></div><div _v="click" _id="table" _title="插入表格" evt="msdn_fh_mousedown clk_domcommand" class="evt sqm_title editor_toolbar_item editor_menu_button_wrap" id="sqm_167"><b class="ico editor_button_ico ico_editor_table"></b><div class="evt ico_wrap editor_menu_button_open" _v="open" evt="msdn_fh_mousedown clk_domcommand"><b class="ico ico_editor_dd"></b></div></div><div _v="exec" _id="emoticons" _title="表情" evt="msdn_fh_mousedown clk_domcommand" class="evt sqm_title editor_toolbar_item editor_button_wrap" id="sqm_168"><b class="ico editor_button_ico ico_editor_emoticons"></b></div><div _v="exec" _id="spellcheck" _title="英语拼写检查" evt="msdn_fh_mousedown clk_domcommand" class="evt sqm_title editor_toolbar_item editor_button_wrap" id="sqm_169"><b class="ico editor_button_ico ico_editor_spell"></b></div><div _v="open" _id="signature" evt="msdn_fh_mousedown clk_domcommand" class="evt selector editor_toolbar_item editor_selector_wrap ellipsis" id="sqm_170"><span class="selector_label text_default">插入签名</span><div class="ico_wrap editor_selector_open"><b class="ico ico_editor_dd"></b></div></div></div><div class="editor_toolbar_line" style="display: none;"><div _v="click" _id="lineheight" _title="行间距" evt="msdn_fh_mousedown clk_domcommand" class="evt sqm_title editor_toolbar_item editor_menu_button_wrap" id="sqm_171"><b class="ico editor_button_ico ico_editor_lineheight"></b><div class="evt ico_wrap editor_menu_button_open" _v="open" evt="msdn_fh_mousedown clk_domcommand"><b class="ico ico_editor_dd"></b></div></div><div _v="exec" _id="alignleft" _title="左对齐" evt="msdn_fh_mousedown clk_domcommand" class="evt sqm_title editor_toolbar_item editor_button_wrap editor_button_on" id="sqm_172"><b class="ico editor_button_ico ico_editor_alignleft"></b></div><div _v="exec" _id="aligncenter" _title="居中对齐" evt="msdn_fh_mousedown clk_domcommand" class="evt sqm_title editor_toolbar_item editor_button_wrap" id="sqm_173"><b class="ico editor_button_ico ico_editor_aligncenter"></b></div><div _v="exec" _id="alignright" _title="右对齐" evt="msdn_fh_mousedown clk_domcommand" class="evt sqm_title editor_toolbar_item editor_button_wrap" id="sqm_174"><b class="ico editor_button_ico ico_editor_alignright"></b></div><div _v="exec" _id="alignjustify" _title="两端对齐" evt="msdn_fh_mousedown clk_domcommand" class="evt sqm_title editor_toolbar_item editor_button_wrap" id="sqm_175"><b class="ico editor_button_ico ico_editor_alignjustify"></b></div><div _v="exec" _id="indent" evt="msdn_fh_mousedown clk_domcommand" class="evt sqm_title editor_toolbar_item editor_button_wrap" id="sqm_176"><b class="ico editor_button_ico ico_editor_indent"></b></div><div _v="exec" _id="italic" _title="斜体（Ctrl+I）" evt="msdn_fh_mousedown clk_domcommand" class="evt sqm_title editor_toolbar_item editor_button_wrap" id="sqm_177"><b class="ico editor_button_ico ico_editor_italic"></b></div><div _v="exec" _id="underline" _title="下划线（Ctrl+U）" evt="msdn_fh_mousedown clk_domcommand" class="evt sqm_title editor_toolbar_item editor_button_wrap" id="sqm_178"><b class="ico editor_button_ico ico_editor_underline"></b></div><div _v="exec" _id="strikethrough" _title="删除线" evt="msdn_fh_mousedown clk_domcommand" class="evt sqm_title editor_toolbar_item editor_button_wrap" id="sqm_179"><b class="ico editor_button_ico ico_editor_strikethrough"></b></div><div _v="exec" _id="removeformat" _title="清除格式" evt="msdn_fh_mousedown clk_domcommand" class="evt sqm_title editor_toolbar_item editor_button_wrap" id="sqm_180"><b class="ico editor_button_ico ico_editor_removeformat"></b></div><div _v="exec" _id="formatmatch" _title="格式刷" evt="msdn_fh_mousedown clk_domcommand" class="evt sqm_title editor_toolbar_item editor_button_wrap" id="sqm_181"><b class="ico editor_button_ico ico_editor_formatmatch"></b></div><div _v="click" _id="link" _title="插入/编辑链接" evt="msdn_fh_mousedown clk_domcommand" class="evt sqm_title editor_toolbar_item editor_menu_button_wrap" id="sqm_182"><b class="ico editor_button_ico ico_editor_link"></b><div class="evt ico_wrap editor_menu_button_open" _v="open" evt="msdn_fh_mousedown clk_domcommand"><b class="ico ico_editor_dd"></b></div></div></div></div></div> </div> </div> <div class="scroll scroll_large editor_h_scroolbar_wrap compose_h_scroolbar" style="width: 701px;" id="sqm_183"> <div class="editor_h_scroolbar_inner" style="width: 821px;"></div> </div> </div> <div class="absolute_full compose_mask" style="display: none;"></div> </div></div></div>
+    </div>
+</div>
+
+<div id="root_scroll_size_test" class="hide_default">Test Content</div>
+<div id="root_page_form_iframe" style="display:none;">
+    <iframe name="openWinProxyIframe" id="openWinProxyIframe" src="./阿里邮箱个人版_files/blank.html"></iframe>
+    <iframe name="downloadIframe" id="downloadIframe" src="./阿里邮箱个人版_files/blank(1).html"></iframe>
+</div>
+
+<div id="root_page_data" style="display:none;">
+            <input type="hidden" id="alimail_global_environment" value="{&quot;appName&quot;:&quot;W4_5478978&quot;,&quot;attachUrlPrefix&quot;:{&quot;save2MimeDisk&quot;:&quot;/attachment/save2ndx&quot;,&quot;downloadExUrlPath&quot;:&quot;/attachment/downloadex&quot;,&quot;upload&quot;:&quot;/attachment/upload&quot;,&quot;downloadTemp&quot;:&quot;/attachment/download?o=1&amp;t=2&quot;,&quot;downloadUrlPath&quot;:&quot;/attachment/download&quot;,&quot;downloadAvatar&quot;:&quot;/attachment/downloadex?et=avatar&quot;,&quot;uploadEx&quot;:&quot;/attachment/uploadex&quot;,&quot;gupload&quot;:&quot;/attachment/gupload&quot;,&quot;downloadEx&quot;:&quot;/attachment/downloadex?&quot;,&quot;download&quot;:&quot;/attachment/download?&quot;,&quot;gdown&quot;:&quot;/attachment/gdown&quot;,&quot;downloadAttach&quot;:&quot;/attachment/downloadex?et=normal&quot;,&quot;gcreatefile&quot;:&quot;/attachment/gcreatefile?mt=1&quot;,&quot;downloadDocstore&quot;:&quot;/attachment/download_docstore&quot;,&quot;zipdown&quot;:&quot;/attachment/zipdown&quot;},&quot;bigAttachExpireDays&quot;:30,&quot;blankPage&quot;:&quot;/static/blank.html&quot;,&quot;booleanConfig&quot;:{&quot;clientSwitchEnable&quot;:true,&quot;noteEnable&quot;:false,&quot;atEnable&quot;:true,&quot;themeEnable&quot;:true,&quot;mailgroupDepartmentCreateEnable&quot;:false,&quot;aliasMergeEnable&quot;:false,&quot;forceHintEnable&quot;:false,&quot;spellCheckUsable&quot;:true,&quot;operationStackEnable&quot;:true,&quot;beeboxEnable&quot;:false,&quot;migrateNoAccessEnable&quot;:true,&quot;operationFolderEnable&quot;:true,&quot;diskEnable&quot;:true,&quot;operationNavigateEnable&quot;:true,&quot;hintEnable&quot;:true,&quot;operationPrivacyEnable&quot;:true,&quot;operationTagEnable&quot;:true,&quot;autoForwardEnable&quot;:true,&quot;contactCompanyEnable&quot;:false,&quot;mailgroupManagedListEnable&quot;:false,&quot;popAccountEnable&quot;:true,&quot;mailAuditEnable&quot;:false,&quot;behalfEnable&quot;:false,&quot;operationMimeboxEnable&quot;:true,&quot;mainAccountEnable&quot;:false,&quot;relatedAccountEnable&quot;:false,&quot;mailEnable&quot;:true,&quot;securityValidateEnable&quot;:false,&quot;operationMailEnable&quot;:true,&quot;calendarScheduleEnable&quot;:false,&quot;operationPopAccountEnable&quot;:true,&quot;pollEnable&quot;:true,&quot;operationSettingEnable&quot;:true,&quot;inlineHelpEnable&quot;:true,&quot;advertisingEnable&quot;:true,&quot;operationContactEnable&quot;:true,&quot;contactEnable&quot;:true,&quot;calendarEnable&quot;:true,&quot;shareEnable&quot;:false,&quot;checkIpRiskEnable&quot;:false,&quot;reportNetworkEnable&quot;:false,&quot;linkNotifyInternelEnable&quot;:true,&quot;faxsmsEnable&quot;:false,&quot;todoEnable&quot;:false,&quot;comboGroupEnable&quot;:false,&quot;operationCalendarEnable&quot;:true,&quot;groupSuggestionEnable&quot;:false,&quot;bigAttachEnable&quot;:true,&quot;introEnable&quot;:false},&quot;browserSessionKey&quot;:&quot;dC05NjUwMy1nV3BWWU0124&quot;,&quot;customVariables&quot;:{},&quot;defaultTheme&quot;:&quot;default&quot;,&quot;forDebug&quot;:false,&quot;forTest&quot;:false,&quot;friendDomains&quot;:[&quot;aliyun.com&quot;],&quot;globalFontFamily&quot;:&quot;Tahoma, Arial, &#39;Microsoft Yahei&#39;&quot;,&quot;globalNotice&quot;:&quot;&quot;,&quot;homeTopLinks&quot;:[{&quot;action&quot;:&quot;&quot;,&quot;content&quot;:&quot;邮箱小助手&quot;,&quot;event&quot;:&quot;aliyunbz1&quot;,&quot;iconId&quot;:&quot;&quot;,&quot;link&quot;:&quot;http://service.taobao.com/support/minerva/beta_robot_main.htm?sourceId=1506120031&quot;,&quot;style&quot;:&quot;&quot;}],&quot;invalidAttachExt&quot;:[&quot;exe&quot;,&quot;com&quot;,&quot;msi&quot;,&quot;bat&quot;,&quot;scr&quot;,&quot;cmd&quot;],&quot;lang&quot;:&quot;zh_CN&quot;,&quot;longConfig&quot;:{&quot;attachSizeLimit&quot;:52428800,&quot;rcpCountLimit&quot;:300,&quot;netdiskItemSizeLimit&quot;:4294967296,&quot;basicTimeoutInterval&quot;:3,&quot;blackWhiteLimit&quot;:500,&quot;attachCountLimit&quot;:100,&quot;resourceSizeLimit&quot;:10485760},&quot;objectConfig&quot;:{&quot;clientLinks&quot;:{&quot;android_code&quot;:&quot;/reference/images/codeQR/other_android_code.png&quot;,&quot;android&quot;:&quot;https://download.alicdn.com/wireless/alimei-android-outside/release/cloudmail.apk&quot;,&quot;ios_code&quot;:&quot;/reference/images/codeQR/other_ios_code.png&quot;,&quot;ios&quot;:&quot;https://itunes.apple.com/cn/app/%E9%98%BF%E9%87%8C%E9%82%AE%E7%AE%B1/id923828102?mt=8&quot;,&quot;win&quot;:&quot;http://aliyun-alimail-desktop.oss-cn-hangzhou.aliyuncs.com/Windows/lastestpackage/Alimail.exe&quot;,&quot;outlook&quot;:&quot;http://aliyun-alimail-desktop.oss-cn-hangzhou.aliyuncs.com/Windows/lastestpackage/AlimailOutlookPlugin.exe&quot;,&quot;mac&quot;:&quot;http://download.taobaocdn.com/freedom/43012/default/Alimail.dmg&quot;}},&quot;pollUrlPath&quot;:&quot;//alimei-sub.alibaba.com/subscribe?sign=3115da6dbf4ea4db7e8c59bc884a671c&quot;,&quot;previewExt&quot;:[&quot;doc&quot;,&quot;docx&quot;,&quot;dotx&quot;,&quot;rtf&quot;,&quot;stw&quot;,&quot;sxw&quot;,&quot;xls&quot;,&quot;xlsx&quot;,&quot;ods&quot;,&quot;xlsm&quot;,&quot;ppt&quot;,&quot;pptx&quot;,&quot;sti&quot;,&quot;sxi&quot;,&quot;pdf&quot;,&quot;jpeg&quot;,&quot;gif&quot;,&quot;bmp&quot;,&quot;png&quot;,&quot;jpg&quot;,&quot;ico&quot;,&quot;jpe&quot;,&quot;tiff&quot;,&quot;tif&quot;,&quot;tga&quot;,&quot;txt&quot;,&quot;ini&quot;,&quot;java&quot;,&quot;c&quot;,&quot;cpp&quot;,&quot;h&quot;,&quot;pl&quot;,&quot;pm&quot;,&quot;py&quot;,&quot;js&quot;,&quot;php&quot;,&quot;xml&quot;],&quot;retcodeSample&quot;:0,&quot;serverDateDescObj&quot;:{&quot;encLunarAnimalTitle&quot;:&quot;狗&quot;,&quot;encLunarDayTitle&quot;:&quot;廿二&quot;,&quot;encLunarGanZhiTitle&quot;:&quot;戊戌&quot;,&quot;encLunarMonthTitle&quot;:&quot;十二月&quot;,&quot;encLunarTitle&quot;:&quot;戊戌狗年　十二月廿二&quot;,&quot;encSolarTitle&quot;:&quot;2019年1月27日(星期日)&quot;,&quot;lunarAnimalTitle&quot;:&quot;狗&quot;,&quot;lunarDayTitle&quot;:&quot;廿二&quot;,&quot;lunarGanZhiTitle&quot;:&quot;戊戌&quot;,&quot;lunarMonthTitle&quot;:&quot;十二月&quot;,&quot;lunarTitle&quot;:&quot;戊戌狗年　十二月廿二&quot;,&quot;solarTitle&quot;:&quot;2019年1月27日(星期日)&quot;},&quot;serverDateTimeObj&quot;:{&quot;d&quot;:27,&quot;hr&quot;:17,&quot;m&quot;:1,&quot;min&quot;:28,&quot;sec&quot;:0,&quot;y&quot;:2019},&quot;serverHostUrl&quot;:&quot;https://mail.aliyun.com&quot;,&quot;serverTimeClassifications&quot;:[1577808000000,1548950400000,1549728000000,1549123200000,1548691200000,1548604800000,1548518400000,1548432000000,1548518400000,1547913600000,1546272000000,1546272000000],&quot;serverTimestamp&quot;:1548581280124,&quot;stringConfig&quot;:{&quot;cnzzId&quot;:&quot;1000081634&quot;,&quot;lastVersionLink&quot;:&quot;/alimail/goEntryTemplate?t=v4&quot;,&quot;helpLink&quot;:&quot;http://mailhelp.aliyun.com/freemail/&quot;,&quot;logoPrefix&quot;:&quot;ind&quot;,&quot;securityCustomView&quot;:&quot;havana&quot;,&quot;phoneClientLink&quot;:&quot;http://www.alimei.com/cloudmailapp.htm&quot;,&quot;sysName&quot;:&quot;阿里邮箱&quot;,&quot;newVersionLink&quot;:&quot;/alimail/goEntryTemplate?t=v5&quot;,&quot;adviceLink&quot;:&quot;https://connect.aliyun.com/?from=aliyunmail&quot;,&quot;hyperlinkWhitelist&quot;:&quot;((aliloan|taobao|tmall|aliyun|alipay|alibaba|1688|alibaba\\-inc|antfin\\-inc|cainiao|cainiao\\-inc|dingtalk|alisoft|alimama|aliimg|alicdn|taobaocdn|alibado|huanqiu|globaltimes|kitco|export\\-entreprises)\\.(com|net|org|com\\.cn))|(lwurl\\.to)|(yunos\\-inc\\.com)|(koubei\\.(com|net|org))|(aliexpress\\.(com|net|org))|(net\\.cn)|(zhifubao\\.com)|(zhifu\\.com)|(ba\\.hichina\\.com)|(gein\\.cn)|(yahoo\\.(com|com\\.cn))|(alixueyuan\\.net)|(atatech\\.org)|(alisoft\\-inc\\.com)|(aliyun\\-inc\\.com)|(aliway\\.com)|((iportal|fis|baoxiao|cg)\\.alibabacorp\\.com)|(club\\.alibabatech\\.org)|(taopiaopiao\\.com)&quot;,&quot;phoneClientLinkCode&quot;:&quot;/static/5478978/images/forFreemail/phone_client.png&quot;},&quot;supportLunar&quot;:true,&quot;supportedLangs&quot;:[{&quot;key&quot;:&quot;zh_CN&quot;,&quot;val&quot;:&quot;简体中文&quot;},{&quot;key&quot;:&quot;en&quot;,&quot;val&quot;:&quot;English&quot;}],&quot;supportedThemes&quot;:[&quot;default&quot;,&quot;1_spring&quot;,&quot;2_summer&quot;,&quot;3_autumn&quot;,&quot;4_winter&quot;,&quot;5_dandelion&quot;,&quot;6_duanwu&quot;,&quot;7_midautumn&quot;,&quot;8_springfestival&quot;],&quot;template&quot;:&quot;DEFAULT&quot;,&quot;themeCover&quot;:&quot;cover.png&quot;,&quot;userBehaviorPrefix&quot;:&quot;W4_DEFAULT&quot;,&quot;version&quot;:&quot;5478978&quot;}">
+        <input type="hidden" id="alimail_global_profile" value="{&quot;activeSyncEnabled&quot;:false,&quot;admin&quot;:false,&quot;aliases&quot;:[&quot;yangjiandu@aliyun.com&quot;],&quot;allowMarketContent&quot;:true,&quot;allowRiskLoginNotify&quot;:true,&quot;attachToken&quot;:&quot;yangjiandu@aliyun.comWgEUv1548581280167&quot;,&quot;autoTrustAddress&quot;:false,&quot;avatarAddr&quot;:&quot;#59ccce&quot;,&quot;bindDingPromptDialog&quot;:true,&quot;calDayViewBlockMin&quot;:30,&quot;calNotifyEnabled&quot;:true,&quot;calendarUserView&quot;:2,&quot;canChangePassword&quot;:false,&quot;collapseQuoteForCompose&quot;:false,&quot;csrfToken&quot;:&quot;QXltVG9rZW4tNDkwMzk1OC01Q29SZWttY09Ba2E1eEVkTUtyM0E2b1NoaHZDSHlpN1lhZjdGblpEenNlSENFWGpIdQ&quot;,&quot;defaultSenderEmail&quot;:&quot;yangjiandu@aliyun.com&quot;,&quot;departmentId&quot;:&quot;-----2----------2:2:----------2&quot;,&quot;desktopNotifyTimeout&quot;:5,&quot;displayName&quot;:&quot;yangjiandu&quot;,&quot;domain&quot;:&quot;aliyun.com&quot;,&quot;editorFont&quot;:{&quot;color&quot;:&quot;&quot;,&quot;family&quot;:&quot;&quot;,&quot;size&quot;:&quot;&quot;},&quot;email&quot;:&quot;yangjiandu@aliyun.com&quot;,&quot;forceSessionOnDetail&quot;:false,&quot;forceTheme&quot;:true,&quot;hasReport&quot;:false,&quot;havanaId&quot;:2200659989165,&quot;highlightKeywordEnabled&quot;:false,&quot;inscribedName&quot;:&quot;&quot;,&quot;itemShowBodyQuote&quot;:false,&quot;itemShowHeaderDetail&quot;:true,&quot;lang&quot;:&quot;zh_CN&quot;,&quot;localLogin&quot;:false,&quot;loginEmail&quot;:&quot;yangjiandu@aliyun.com&quot;,&quot;loginEmailAlias&quot;:true,&quot;mailExpandMode&quot;:2,&quot;mailListPageSize&quot;:20,&quot;mailNotifyEnabled&quot;:true,&quot;mailNotifyInboxEnabled&quot;:false,&quot;mailSplitMode&quot;:false,&quot;mailSplitModeV5&quot;:true,&quot;markReadTimeout&quot;:500,&quot;navShowCalendar&quot;:true,&quot;navShowComboGroup&quot;:true,&quot;navShowContact&quot;:true,&quot;navShowDisk&quot;:true,&quot;navShowMail&quot;:true,&quot;navShowNote&quot;:true,&quot;navShowTodo&quot;:true,&quot;navigateCollapseStatus&quot;:167772160,&quot;popImapEnabled&quot;:true,&quot;priorDisplayNameRcpType&quot;:&quot;0&quot;,&quot;pushmailEnabled&quot;:true,&quot;receiptAfterRead&quot;:false,&quot;saveToSendFolder&quot;:true,&quot;sendReceiptMode&quot;:1,&quot;sessionItemBubble&quot;:true,&quot;sessionMode&quot;:false,&quot;showAppClosePrompt&quot;:true,&quot;showDingMessageCount&quot;:true,&quot;showDownloadDing&quot;:true,&quot;showFullEditorToolbar&quot;:false,&quot;showMailSplitModePrompt&quot;:true,&quot;showMailgroupSendPrompt&quot;:false,&quot;showNavCollapsePrompt&quot;:true,&quot;showSummary&quot;:false,&quot;showWhale&quot;:true,&quot;silentLogin&quot;:false,&quot;smartHintStatus&quot;:402882588,&quot;smtpSaveToSendFolder&quot;:true,&quot;spamReportEnabled&quot;:false,&quot;splitterCalendarWidth&quot;:0,&quot;splitterContactWidth&quot;:0,&quot;splitterMailWidth&quot;:0,&quot;splitterNavWidth&quot;:0,&quot;splitterNetdiskWidth&quot;:0,&quot;subjectPrefixEnglish&quot;:false,&quot;templateV4ForBindDingV5ForWebDing&quot;:false,&quot;theme&quot;:&quot;default&quot;,&quot;timeZone&quot;:{&quot;dstSavings&quot;:0,&quot;endDay&quot;:0,&quot;endDayOfWeek&quot;:0,&quot;endMonth&quot;:0,&quot;endTime&quot;:0,&quot;endTimeMode&quot;:0,&quot;id&quot;:&quot;Asia/Shanghai&quot;,&quot;offset&quot;:28800000,&quot;startDay&quot;:0,&quot;startDayOfWeek&quot;:0,&quot;startMonth&quot;:0,&quot;startTime&quot;:0,&quot;startTimeMode&quot;:0},&quot;timeZoneId&quot;:&quot;Asia/Shanghai&quot;,&quot;uniqueKey&quot;:&quot;a12bd819d2a4094d&quot;,&quot;webmail5SmartHintStatus&quot;:0,&quot;weekStart&quot;:0}">
+        <input type="hidden" id="alimail_global_hash" value="">
+    <input type="hidden" id="alimail_global_forward" value="">
+
+    <form name="browser_log" id="browser_log" action="https://mail.aliyun.com/alimail/error/browserLog" target="openWinProxyIframe" method="post">
+        <input type="hidden" id="browser_log_text" name="text">
+        <input type="hidden" id="browser_log_key" name="key">
+        <input type="hidden" id="browser_log_browser" name="_root_token_" value="dC05NjUwMy1nV3BWWU0124">
+    </form>
+    <form name="reload_homepage" id="reload_homepage" action="https://mail.aliyun.com/alimail/reloadHomepage" method="post">
+    <input type="hidden" id="reload_homepage_status" name="status">
+    <input type="hidden" id="reload_homepage_reurl" name="reurl">
+</form>
+
+</div>
+
+<div style="display: none;">
+    <iframe id="helper_iframe" src="javascript:document.open();document.close();" src="./阿里邮箱个人版_files/saved_resource(5).html"></iframe>
+</div>
+
+<div id="hint_mask_transp_wrap" class=" absolute_full hint_mask_transp_wrap" style="display: none;">
+    <div class="evt hint_mask_transp alpha_0" evt="clk_domcommand msdn_h"></div>
+<div class="evt smart_hint_info_wrap unselectable" evt="clk_domcommand msdn_h" style="display: none;" id="sqm_81"><div class="stack_info_msg_1">邮件列表</div><div class="stack_info_msg_2">创建关注</div><div class="smart_hint_info_stack"><div class="smart_hint_ico_stack_wrap"><div class="smart_hint_ico_stack"></div></div><div class="smart_hint_ico_msg_wrap"><span class="smart_hint_ico_msg">你可以尝试拖拽一封邮件到这里，重要的人和重要的事随时了解。邮件汇集在这里时时把控事件动态</span></div><b class="smart_hint_arrow"></b><b class="evt smart_hint_close"></b></div></div></div>
+
+<div id="smart_hint_anchor_wrap" class="smart_hint_anchor_wrap"></div>
+
+<script type="text/javascript" nonce="">
+    (function () {
+        var LOADING_FILE = "正在加载资源文件...";
+        var LOADING_SCRIPT = "正在加载脚本文件...";
+        var LOADING_CLASS = "正在初始化脚本...";
+        var LOADING_STYLE = "正在加载皮肤...";
+        var LOADING_PAGE = "正在初始化页面...";
+        var currentPercent = 0;
+
+        function fillLoadingStatus() {
+            var statusText = "", statusPercent = 0, sqm = window.sqm;
+
+            if (sqm) {
+                var status = sqm.loadingStatus;
+
+                if (status) {
+                    if (status.business) {
+                        statusText = LOADING_PAGE;
+                        statusPercent = 90 + status.business * 3;
+                    } else if (status.framework) {
+                        statusText = LOADING_STYLE;
+                        statusPercent = 83;
+                    } else if (status.loadedScript >= status.totalScript) {
+                        if (status.loadedClass >= status.totalClass) {
+                            if (status.loadedRequire >= status.totalRequire) {
+                                statusText = LOADING_CLASS + status.totalRequire + "/" + status.totalRequire;
+                                statusPercent = 80;
+                            } else {
+                                statusText = LOADING_CLASS + (status.totalRequire ? ("" + status.loadedRequire + "/" + status.totalRequire) : "");
+                                statusPercent = 65 + (status.totalRequire ? status.loadedRequire / status.totalRequire : 0) * 15;
+                            }
+                        } else {
+                            statusText = LOADING_SCRIPT + (status.totalClass ? ("" + status.loadedClass + "/" + status.totalClass) : "");
+                            statusPercent = 50 + (status.totalClass ? status.loadedClass / status.totalClass : 0) * 15;
+                        }
+                    } else {
+                        statusText = LOADING_FILE + (status.totalScript ? ("" + status.loadedScript + "/" + status.totalScript) : "");
+                        statusPercent = Math.pow(status.totalScript ? status.loadedScript / status.totalScript : 0, 1.8) * 50;
+                    }
+                } else {
+                    statusText = LOADING_FILE;
+                    statusPercent = 0;
+                }
+            } else {
+                statusText = LOADING_FILE;
+                statusPercent = 0;
+            }
+
+            statusPercent = Math.max(Math.min(statusPercent.toFixed(), 100), 0);
+
+            if (statusPercent > currentPercent) {
+                currentPercent = statusPercent;
+
+                var progressBar = document.getElementById("loading_progress_inner");
+
+                if (progressBar) {
+                    progressBar.style.width = "" + currentPercent + "%";
+                }
+            }
+
+            var elm = document.getElementById("loading_status");
+
+            if (elm) {
+                if (typeof elm.innerText === "string") {
+                    elm.innerText = statusText;
+
+                } else if (typeof elm.textContent === "string") {
+                    elm.textContent = statusText;
+                }
+
+                setTimeout(fillLoadingStatus, 500);
+            }
+        }
+
+        setTimeout(fillLoadingStatus, 200);
+    })();
+
+    function globalErrFunc(text, key) {
+                    try {
+                var formNode = document.getElementById("browser_log");
+
+                document.getElementById("browser_log_text").value = text;
+                document.getElementById("browser_log_key").value = key || "";
+
+                formNode.action = "\/alimail\/error\/browserLog?_timestamp_=" + (new Date().getTime());
+                formNode.submit();
+            } catch (e) {
+
+            }
+            }
+
+                                                        </script>
+
+                <script type="text/javascript" src="./阿里邮箱个人版_files/zh_CN.js.下载"></script>
+            <script type="text/javascript" src="./阿里邮箱个人版_files/kernel.js.下载" sqm_kernel="1" sqm_test="0" sqm_debug="0" sqm_timeout="15000"></script>
+    
+<div id="root_finish_div" style="display:none;"></div>
+
+
+<iframe id="blockbyte-bs-sidebar" class="notranslate" data-pos="left" src="./阿里邮箱个人版_files/saved_resource(6).html"></iframe><div id="blockbyte-bs-indicator" class="blockbyte-bs-fullHeight" style="width: 2px; height: 100%; top: 0%;"></div><div style="display:none" class="layer_wrap layer_box_shadow evt nav_app_tips_wrap fs0" evt="clk_h" id="sqm_22"></div><div id="sqm_80" class="alpha_0 layer_mask" style="z-index: 1001; display: none;"></div></body></html>

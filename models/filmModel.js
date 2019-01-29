@@ -4,7 +4,11 @@ const schema = new db.Schema({
     filmName:{          //电影名 死侍2：我爱我家
         type:String,
         default:'死侍2：我爱我家'
-    }, 
+    },
+    poster:{            //电影海报
+        type:String,
+        default:'https://pic.maizuo.com/usr/movie/ac3bf881e81a3012a229188b77a8d9a8.jpg'
+    },
     director:{
         type:String,    //电影类型   喜剧|动作|科幻|冒险
         default:'喜剧|动作|科幻|冒险'

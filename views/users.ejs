@@ -18,6 +18,8 @@
       <%- include('./common/header.ejs')%>
     <div class="layout-body">
             <button class="btn btn-default" data-toggle="modal" data-target="#addModal">新增</button>
+            <span class="span">用户名：<input type="text" name="keyword" placeholder="SEARCH" class="search" id="search" /><input
+                type="submit" value="搜索" class="btn-search" data-toggle="modal" data-target=".bs-example-modal-lg"></span>
         <table class="layui-table" lay-even="" lay-skin="row" id="users_table">
             <colgroup>
               <col width="150">
@@ -41,21 +43,6 @@
           <!-- 分页器 -->
           <nav aria-label="Page navigation">
             <ul class="pagination">
-                <!-- <li>
-                    <a href="#" aria-label="Previous">
-                        <span aria-hidden="true">&laquo;</span>
-                    </a>
-                </li>
-                <li><a href="#">1</a></li>
-                <li><a href="#">2</a></li>
-                <li><a href="#">3</a></li>
-                <li><a href="#">4</a></li>
-                <li><a href="#">5</a></li>
-                <li>
-                    <a href="#" aria-label="Next">
-                        <span aria-hidden="true">&raquo;</span>
-                    </a>
-                </li> -->
             </ul>
         </nav>
         <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">

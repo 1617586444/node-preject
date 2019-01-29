@@ -12,12 +12,13 @@ router.post('/register', (req, res) => {
     let userName = req.body.userName;
     let password = req.body.password;
     let nickName = req.body.nickName;
+    let isAdmin = req.body.isAdmin;
     // 2.实例化用户对象 
-    console.log(userName,password,nickName)
     let users = new UsersModel({
         userName: req.body.userName,
         password: req.body.password,
-        nickName: req.body.nickName
+        nickName: req.body.nickName,
+        isAdmin:  req.body.isAdmin
     });
 
     // 3. save 方法
@@ -44,7 +45,6 @@ router.post('/login',(req,res) =>{
         userName,
         password
     }).then(data =>{
-        console.log(data);
         // 判断如果存在 data 有值  不存在 null
         if(!data){
             res.json({
@@ -58,6 +58,7 @@ router.post('/login',(req,res) =>{
                 maxAge: 1000 * 60 * 100
             })
 
+            console.log(data)
             if(data.isAdmin) {
                 res.cookie('isAdmin', data.isAdmin ,{
                     maxAge: 1000 * 60 * 100
@@ -69,7 +70,7 @@ router.post('/login',(req,res) =>{
                 data:{
                     id:data._id,
                     nickName:data.nickName,
-                    idAdmin:data.isAdmin
+                    isAdmin:data.isAdmin
                 }
             })
         }
@@ -92,22 +93,22 @@ router.post('/login',(req,res) =>{
 router.post('/add',(req,res) =>{
     // 获取前端传过来的数据
     var users = new UsersModel({
-        name:req.body.usersName,
-        password:req.body.password
+        name: req.body.usersName,
+        password: req.body.password
     });
 
-    users.save(function(err){
-        if(err){
+    users.save(function (err) {
+        if (err) {
             // 失败  
             res.json({
-                code:-1,
-                msg:err.message
+                code: -1,
+                msg: err.message
             })
         } else {
-        // 成功
+            // 成功
             res.json({
-                code:0,
-                msg:'ok'
+                code: 0,
+                msg: 'ok'
             })
         }
 
@@ -163,7 +164,6 @@ router.get('/search', (req, res) => {
     // 1 从前端的到传过来的数据
     let pageNum = parseInt(req.query.pageNum) || 1; // 当前页数
     let pageSize = parseInt(req.query.pageSize) || 2; // 每页显示条数
-
 
     // 采用并行无关联
     async.parallel([

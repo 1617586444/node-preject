@@ -10,6 +10,7 @@
         this.pageSize = 3; //每页显示的条数
         this.totalPage = 0; // 总的页数
         this.bannerList = []; //banner 数据
+        this.seekList = []; //搜索出来的数据
 
 
         // 需要用的的 dom 对象
@@ -24,43 +25,44 @@
             recipientName: $("#recipient-name"), //名字修改框
             messageText: $("#message-text"), //图片修改框
             upBanner: $("#upBanner"), //确认修改框
+            searchInput: $("#search"), // 搜索框
+            searchBtn: $(".btn-search"), // 搜索按钮
+            ulFilmInfo: $(".nowPlayingList"), // 搜索按钮
         }
-
     }
     // 新增方法
     Banner.prototype.add = function () {
-    var that = this;
-    // ajax 提交 并且带文件
-    // 实例化一个 FormData 对象
-    var formData = new FormData();
+        var that = this;
+        // ajax 提交 并且带文件
+        // 实例化一个 FormData 对象
+        var formData = new FormData();
 
-    // 给 formData 对象 加属性 
-    formData.append('bannerName',this.dom.nameInput.val());
-    formData.append('bannerImg',this.dom.urlInput[0].files[0]);
-    $.ajax({
-        url:'/banner/add',
-        method:'POST',
-        // 上传文件需要添加这两个属性
-        processData:false,
-        contentType:false,
-        data:formData,
-        success:function(){
-            layer.msg('添加成功');
-            that.search();
-        },
-        error:function(error){
-            console.log(error)
-            layer.msg('网络异常，请稍后重试');
-        },
-        complete:function(){
-            // 不管成功还是失败都会走进来
-            // 手动关闭模态框
-            that.dom.addModal.modal('hide');
-            that.dom.nameInput.val('');
-            that.dom.urlInput.val('');
-        }
-    })
-
+        // 给 formData 对象 加属性 
+        formData.append('bannerName', this.dom.nameInput.val());
+        formData.append('bannerImg', this.dom.urlInput[0].files[0]);
+        $.ajax({
+            url: '/banner/add',
+            method: 'POST',
+            // 上传文件需要添加这两个属性
+            processData: false,
+            contentType: false,
+            data: formData,
+            success: function () {
+                layer.msg('添加成功');
+                that.search();
+            },
+            error: function (error) {
+                console.log(error)
+                layer.msg('网络异常，请稍后重试');
+            },
+            complete: function () {
+                // 不管成功还是失败都会走进来
+                // 手动关闭模态框
+                that.dom.addModal.modal('hide');
+                that.dom.nameInput.val('');
+                that.dom.urlInput.val('');
+            }
+        })
     }
 
     // 查询的方法
@@ -131,7 +133,7 @@
     }
 
     // 修改的方法
-    Banner.prototype.update = function (id,moveName) {
+    Banner.prototype.update = function (id, moveName) {
         this.dom.recipientName.val(moveName)
         var that = this;
         this.dom.upBanner.click(function () {
@@ -150,9 +152,36 @@
                 }
                 // 手动关闭模态框
                 $("#change").modal('hide');
-                
             });
-            
+        })
+    }
+
+    // 模糊搜索的方法
+    Banner.prototype.seekInfo = function () {
+        var that = this;
+        var searchVal = this.dom.searchInput.val() || ' ';
+        $.post('/banner/seek', {
+            filmName: searchVal
+        }, function (result) {
+            if (result.code === 0) {
+                layer.msg('搜索成功');
+                // 将数据装到 seekList
+                that.seekList = result.rel;
+                console.log(that.seekList)
+
+                // 调用渲染数据方法
+                that.seekPage();
+                // 清空输入框的这
+                that.dom.searchInput.val('')
+            } else if (result.code === 1) {
+                // 渲染一下数据
+                that.dom.ulFilmInfo.html('');
+                that.dom.ulFilmInfo.append(
+                    `
+                    <li style="line-height:30px; padding-left:10px; color:red">您搜索的电影不存在!</li>
+                    `
+                )
+            }
         })
     }
 
@@ -193,6 +222,41 @@
              `
         )
     }
+
+    /**
+     * 渲染搜索结果
+     * 
+     */
+
+    Banner.prototype.seekPage = function () {
+        this.dom.ulFilmInfo.html('');
+        for (var i = 0; i < this.seekList.length; i++) {
+            var item = this.seekList[i];
+            this.dom.ulFilmInfo.append(
+                `
+                <li style="overflow: hidden; border-bottom:1px solid #ccc;">
+                    <div  class="lazy-img nowPlayingFilm-img" alt="film" style="width: 66px; height: 94px; background: rgb(249, 249, 249); float: left;">
+                        <div data-v-fa55ebd6="" class="padding" style="width: 66px; height: 94px; background: rgb(249, 249, 249);"><img
+                                data-v-fa55ebd6="" src="${item.imgUrl}"
+                                width="64px" alt="img"></div>
+                        <div></div>
+                    </div>
+                    <div class="nowPlayingFilm-info " style="float: left;">
+                        <div class=""><span class="name">电影名字：${item.name}</span><br/><span
+                                class="item">影片类型：2D</span></div>
+                        <div class="nowPlayingFilm-grade info-col" style="visibility: visible;"><span class="label newInfo">观众评分
+                            </span><span class="grade">7.4</span></div>
+                        <div class="nowPlayingFilm-actors info-col newInfo"><span class="label newInfo">主演：大卫·雷奇 莫蕾娜·巴卡琳
+                                </span></div>
+                        <div class="nowPlayingFilm-detail info-col"><span class="label newInfo">美国 | 119分钟</span></div>
+                    </div>
+                </li>
+                `
+            )
+        }
+    }
+
+
 
     // 将所有的DOM 事件 操作放这里
     Banner.prototype.bidDOM = function () {
@@ -240,7 +304,13 @@
             that.dom.exampleModal.modal('show');
             var moveName = $(this).parent().parent().find('td').eq(1).text();
             // 调用 修改事件
-            that.update(id,moveName);
+            that.update(id, moveName);
+        })
+
+        // 点击搜索按钮
+        this.dom.searchBtn.click(function () {
+            // alert(that.dom.searchInput.val())
+            that.seekInfo();
         })
     }
 
@@ -253,4 +323,3 @@
     })
 
 })();
-

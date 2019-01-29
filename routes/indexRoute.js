@@ -5,6 +5,7 @@ const path = require('path');
 const router = express.Router();
 const  infoFilm =require('../models/bannerModel');
 const  usersInfo =require('../models/usersModel');
+const  cinemaInfo =require('../models/cinemaModel');
 const userCheck = require('../middlewares/userCheck');
 
 // 首页 -http://localhost:3000/
@@ -33,6 +34,16 @@ router.get('/film.html' ,userCheck ,(req,res) =>{
     let nickName = req.cookies.nickName;
     let isAdmin = req.cookies.isAdmin ? true : false
     res.render('film.ejs',{
+        nickName: req.cookies.nickName,
+        isAdmin: parseInt(req.cookies.isAdmin)
+    })
+})
+// 设置 cinema 影院管理页面
+
+router.get('/cinema.html' ,userCheck ,(req,res) =>{
+    let nickName = req.cookies.nickName;
+    let isAdmin = req.cookies.isAdmin ? true : false
+    res.render('cinema.ejs',{
         nickName: req.cookies.nickName,
         isAdmin: parseInt(req.cookies.isAdmin)
     })
