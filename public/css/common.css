@@ -173,3 +173,12 @@ body {
 .newInfo{
     color: #000;
 }
+/* 搜索显示框 */
+#searchUl{
+  padding:10px;
+}
+#searchUl li{
+  border-bottom:1px solid #ccc;
+  line-height:12px;
+  padding:10px 0;
+}

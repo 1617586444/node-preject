@@ -12,8 +12,7 @@ const upload = multer({
     dest: 'h:/tmp'
 })
 
-// 搜索信息 http://localhost:3000/banner/seek
-
+// 模糊搜索信息 http://localhost:3000/banner/seek
 router.post('/seek', (req, res) => {
     // 接收前端发来的数据
     let filmName = new RegExp(req.body.filmName)
