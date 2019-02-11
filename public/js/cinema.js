@@ -155,9 +155,8 @@
 
   // 修改的方法
   Cinema.prototype.update = function (id) {
-    // this.dom.recipientName.val(moveName)
     var that = this;
-    this.dom.upBanner.click(function () {
+    this.dom.upBanner.unbind('click').click(function () {
       $.post('/cinema/update', {
         id: id,
         name: that.dom.recipientName.val(),

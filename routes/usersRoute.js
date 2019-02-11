@@ -9,10 +9,6 @@ const router = express.Router();
 // 注册 - http:localhost:3000/users/register/
 router.post('/register', (req, res) => {
   //1. 得到数据 前端传递过来的参数名和表中的字段名一样
-  let userName = req.body.userName;
-  let password = req.body.password;
-  let nickName = req.body.nickName;
-  let isAdmin = req.body.isAdmin;
   // 2.实例化用户对象 
   let users = new UsersModel({
     userName: req.body.userName,
